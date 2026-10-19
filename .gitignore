@@ -1,3 +1,7 @@
 .venv/
 .env
 __pycache__/
+
+# research data - participant observations, keep off a public repo
+*.xlsx
+*.csv

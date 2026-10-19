@@ -42,19 +42,59 @@ def load_prompt(name):
         return f.read()
 
 
-QUESTION_PROMPT = load_prompt("prompt.txt")
-SCORING_PROMPT = load_prompt("prompt_scoring.txt")
+GROUNDED_PROMPT = load_prompt("prompt.txt")        # full posting -> cited questions
+ROLE_PROMPT = load_prompt("prompt_role.txt")       # role title only -> typical questions
+SCORING_PROMPT = load_prompt("prompt_scoring.txt")  # answer -> rubric scores
 
 
-# session state
 for key, default in [
-    ("questions", []),      # list of question strings
-    ("raw_output", ""),     # full markdown from the generator
+    ("questions", []),
+    ("raw_output", ""),
     ("jd", ""),
-    ("history", []),        # list of attempt dicts
+    ("mode", ""),
+    ("history", []),
 ]:
     if key not in st.session_state:
         st.session_state[key] = default
+
+
+# ----------------------------------------------------------------------
+# input routing
+# ----------------------------------------------------------------------
+# Phrases that only show up in a real job ad, never in a typed role title.
+POSTING_SIGNALS = (
+    "responsibilit", "qualificat", "requirement", "you will", "we are looking",
+    "experience with", "preferred", "nice to have", "about the role",
+    "what you'll", "what you will", "years of", "degree in", "proficien",
+    "familiar with", "ability to", "the ideal candidate", "benefits",
+)
+
+
+def classify_input(text):
+    """Decide whether the user gave a job posting or just a role title.
+
+    Deliberately a rule, not a model call. It is instant, costs nothing, and
+    gives the same answer every time - which matters because the user sees
+    which mode was chosen and should be able to predict it.
+
+    Returns "posting" or "role".
+    """
+    stripped = text.strip()
+    words = len(stripped.split())
+    lowered = stripped.lower()
+
+    signals = sum(1 for s in POSTING_SIGNALS if s in lowered)
+    lines = [ln for ln in stripped.splitlines() if ln.strip()]
+
+    # A handful of words with no job-ad language is a role title.
+    if words < 25 and signals == 0:
+        return "role"
+
+    # A short blurb with little ad language and no list structure is still thin.
+    if words < 60 and signals < 2 and len(lines) < 4:
+        return "role"
+
+    return "posting"
 
 
 # ----------------------------------------------------------------------
@@ -72,7 +112,7 @@ def call_model(prompt, temperature=0.4):
 def extract_questions(markdown_text):
     """Pull the bolded numbered questions out of the generator's markdown.
 
-    The question prompt formats each as:  **1. the question**
+    Both prompts format each question as:  **1. the question**
     """
     found = re.findall(r"\*\*\s*\d+\.\s*(.+?)\*\*", markdown_text, flags=re.DOTALL)
     return [re.sub(r"\s+", " ", q).strip() for q in found]
@@ -104,7 +144,6 @@ def score_answer(question, answer):
     if not data:
         return None, raw
 
-    # defensive: make sure every dimension is present and in range
     for d in DIMENSIONS:
         block = data.get(d) or {}
         try:
@@ -119,7 +158,7 @@ def score_answer(question, answer):
 # UI
 # ----------------------------------------------------------------------
 st.title("Interview Coach")
-st.caption("Paste a job posting, get questions grounded in it, then practise answering and track your scores.")
+st.caption("Paste a job posting, or just type a role. Then practise answering and track your scores.")
 
 tab_q, tab_p, tab_h = st.tabs(["1 · Questions", "2 · Practise", "3 · Progress"])
 
@@ -127,29 +166,45 @@ tab_q, tab_p, tab_h = st.tabs(["1 · Questions", "2 · Practise", "3 · Progress
 # ---------------- tab 1: questions ----------------
 with tab_q:
     jd = st.text_area(
-        "Job description",
+        "Job posting, or just a role title",
         value=st.session_state["jd"],
-        height=240,
-        placeholder="Paste the full job posting here...",
+        height=220,
+        placeholder='Paste the full posting for questions tied to it.\nOr type something like "Data Analyst" to get started.',
     )
 
     if st.button("Generate questions", type="primary"):
         if not jd.strip():
-            st.warning("Paste a job description first.")
+            st.warning("Type a role, or paste a posting.")
         else:
-            with st.spinner("Reading the posting..."):
-                out = call_model(QUESTION_PROMPT + jd)
+            mode = classify_input(jd)
+            prompt = GROUNDED_PROMPT if mode == "posting" else ROLE_PROMPT
+            spinner = "Reading the posting..." if mode == "posting" else "Thinking about this role..."
+
+            with st.spinner(spinner):
+                out = call_model(prompt + jd)
+
             st.session_state["jd"] = jd
+            st.session_state["mode"] = mode
             st.session_state["raw_output"] = out
             st.session_state["questions"] = extract_questions(out)
 
     if st.session_state["raw_output"]:
+        if st.session_state["mode"] == "posting":
+            st.success(
+                "**Grounded mode** — you gave a full posting, so every question below "
+                "cites the exact phrase it came from."
+            )
+        else:
+            st.info(
+                "**Role mode** — you gave a role, not a posting, so these are the questions "
+                "this role usually attracts. Paste the actual posting to get questions tied to it."
+            )
+
         st.markdown(st.session_state["raw_output"])
+
         n = len(st.session_state["questions"])
         if n:
-            st.success(f"{n} questions ready. Go to the Practise tab to answer one.")
-        else:
-            st.info("Questions generated, but none could be parsed for practice. Check the output format.")
+            st.caption(f"{n} questions ready. Go to the Practise tab to answer one.")
 
 
 # ---------------- tab 2: practise ----------------
@@ -206,6 +261,7 @@ with tab_p:
 
                     st.session_state["history"].append({
                         "time": datetime.datetime.now().strftime("%H:%M:%S"),
+                        "mode": st.session_state["mode"],
                         "question": choice[:70] + ("..." if len(choice) > 70 else ""),
                         "words": words,
                         **{d: data[d]["score"] for d in DIMENSIONS},
