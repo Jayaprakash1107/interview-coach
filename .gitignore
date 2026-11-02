@@ -2,6 +2,7 @@
 .env
 __pycache__/
 
-# research data - participant observations, keep off a public repo
+# research data and user answers - keep off a public repo
 *.xlsx
 *.csv
+*.db
