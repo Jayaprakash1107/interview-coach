@@ -128,8 +128,76 @@ def score_answer(question, answer):
     return data, raw
 
 
+
+# ----------------------------------------------------------------------
+# grounding verification
+# ----------------------------------------------------------------------
+# The grounded prompt makes each question cite an exact phrase from the
+# posting. That is a claim, and a claim the user cannot reasonably check six
+# times by hand. So the app checks it: pull every cited phrase out of the
+# output and confirm it really appears in the text the user supplied.
+#
+# Normalisation is formatting only - case, whitespace, smart quotes, dashes.
+# It deliberately does NOT allow paraphrase, because "verbatim" is the whole
+# point of the claim being made.
+
+_SMART = {
+    "\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"',
+    "\u2013": "-", "\u2014": "-", "\u00a0": " ",
+}
+
+
+def normalise(text):
+    for a, b in _SMART.items():
+        text = text.replace(a, b)
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def extract_citations(markdown_text):
+    """Phrases the model claimed to quote, from the 'Grounded in:' lines."""
+    return re.findall(r"Grounded in:\s*[\"\u201c](.+?)[\"\u201d]",
+                      markdown_text, flags=re.DOTALL)
+
+
+def verify_citations(markdown_text, source_text):
+    """Return [(phrase, found_in_source)] for every citation in the output."""
+    haystack = normalise(source_text)
+    out = []
+    for phrase in extract_citations(markdown_text):
+        out.append((phrase.strip(), normalise(phrase) in haystack))
+    return out
+
+
 def short(text, n=60):
     return text[:n] + ("..." if len(text) > n else "")
+
+
+
+EXAMPLE_POSTING = """Data Analyst, Customer Insights
+Boston, MA (hybrid, 3 days on site)
+
+About the role
+Our Customer Insights team turns raw product and billing data into decisions
+the commercial organisation can act on. You will own reporting for two business
+lines and act as the analytical partner to their leads.
+
+Key responsibilities
+- Build and maintain dashboards in Tableau covering retention, churn and
+  expansion revenue
+- Write and optimise SQL against a Snowflake warehouse, including models that
+  other analysts depend on
+- Partner with non-technical stakeholders to turn vague questions into
+  measurable analyses, and present findings to directors
+- Investigate data quality issues and drive them to resolution with the data
+  engineering team
+
+Qualifications
+- 2+ years of experience with SQL in a production analytics environment
+- Demonstrated ability to communicate findings clearly to a non-technical
+  audience
+- Experience with Python for analysis is preferred
+- Degree in a quantitative field, or equivalent practical experience
+"""
 
 
 # ----------------------------------------------------------------------
@@ -177,7 +245,15 @@ with tab_q:
         placeholder='Paste the full posting for questions tied to it.\nOr type something like "Data Analyst" to get started.',
     )
 
-    if st.button("Generate questions", type="primary"):
+    b1, b2, _ = st.columns([2, 2, 3])
+    with b1:
+        go = st.button("Generate questions", type="primary")
+    with b2:
+        if st.button("Try an example"):
+            st.session_state["jd"] = EXAMPLE_POSTING
+            st.rerun()
+
+    if go:
         if not jd.strip():
             st.warning("Type a role, or paste a posting.")
         else:
@@ -193,6 +269,34 @@ with tab_q:
             st.success("**Grounded mode** — you gave a full posting, so every question cites the phrase it came from.")
         else:
             st.info("**Role mode** — you gave a role, not a posting, so these are the questions this role usually attracts. Paste the actual posting for questions tied to it.")
+
+        # Verify the grounding claim rather than just making it.
+        if st.session_state["mode"] == "posting":
+            checks = verify_citations(st.session_state["raw_output"], st.session_state["jd"])
+            if checks:
+                ok = sum(1 for _, found in checks if found)
+                total = len(checks)
+                if ok == total:
+                    st.success(
+                        f"**Grounding check: {ok} of {total} citations verified.** "
+                        "Every quoted phrase was found in the posting you supplied."
+                    )
+                else:
+                    st.warning(
+                        f"**Grounding check: {ok} of {total} citations verified.** "
+                        f"{total - ok} could not be found verbatim in the posting — "
+                        "treat those questions with caution."
+                    )
+
+                with st.expander(f"See all {total} citations"):
+                    for phrase, found in checks:
+                        mark = "✅" if found else "⚠️"
+                        st.markdown(f"{mark} “{phrase}”")
+                    st.caption(
+                        "Checked by searching the posting for each quoted phrase. "
+                        "Case, spacing and quote style are ignored; wording is not."
+                    )
+
         st.markdown(st.session_state["raw_output"])
         if st.session_state["questions"]:
             st.caption(f"{len(st.session_state['questions'])} questions ready. Practise tab next.")
