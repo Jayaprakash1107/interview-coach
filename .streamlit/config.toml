@@ -1,0 +1,9 @@
+# Streamlit's own widgets read these, so the chrome matches the stylesheet
+# rather than fighting it. Light base: the page is exam paper, not a console.
+[theme]
+base = "light"
+primaryColor = "#16303F"
+backgroundColor = "#F6F7F4"
+secondaryBackgroundColor = "#EDEFEA"
+textColor = "#16303F"
+font = "sans serif"

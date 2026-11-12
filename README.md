@@ -1,6 +1,8 @@
-# Interview Coach
+# Groundwork
 
-Paste a job posting, get interview questions that are provably tied to it, then practise answering and watch your scores move across sessions.
+*Interview questions that show their working.*
+
+Paste a job posting, get interview questions that are provably tied to it, then practice answering and watch your scores move across sessions.
 
 Built as an IT capstone project (M.S. Information Technology, Generative AI concentration, Clark University).
 
@@ -20,7 +22,7 @@ The second failure is the interesting one. A language model will happily produce
 
 The generation prompt requires each question to quote the exact phrase from the posting it was derived from, and forbids asking anything that cannot be quoted. That is a claim. The app then verifies it: each cited phrase is searched for in the posting the user supplied, and the result is reported as `6 of 6 citations verified`, with a warning on any that cannot be found verbatim.
 
-Formatting differences are normalised — case, whitespace, smart quotes, dashes. Wording is not. A paraphrase fails the check, which is the point.
+Formatting differences are normalized — case, whitespace, smart quotes, dashes. Wording is not. A paraphrase fails the check, which is the point.
 
 **Input is routed, not assumed.**
 
@@ -29,7 +31,7 @@ A full posting and a two-word role title need different handling. A rule — wor
 | Input | Mode | Behaviour |
 |---|---|---|
 | Full posting | Grounded | Every question cites an exact phrase; citations verified |
-| Role title only | Role | Typical questions for that role, labelled as not posting-specific |
+| Role title only | Role | Typical questions for that role, labeled as not posting-specific |
 
 This is a rule rather than a model call on purpose: it is instant, costs nothing, and returns the same answer every time. The user is told which mode fired, so the behaviour is predictable.
 
@@ -44,8 +46,8 @@ That last part is the thing a chat window cannot do. A chatbot can score one ans
 ## Running it
 
 ```bash
-git clone https://github.com/Jayaprakash1107/interview-coach.git
-cd interview-coach
+git clone https://github.com/Jayaprakash1107/groundwork.git
+cd groundwork
 python -m venv .venv
 source .venv/bin/activate        # Windows: .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -69,8 +71,13 @@ Deployed on Streamlit Community Cloud, with the key supplied through Secrets rat
 
 | File | Responsibility |
 |---|---|
-| `app.py` | UI, input routing, grounding verification |
+| `app.py` | Entry point and page navigation |
+| `core.py` | API client, prompts, input routing, grounding verification |
+| `ui.py` | Presentation components and the brand lockup |
+| `page_home.py` | Landing page |
+| `page_practice.py` | The tool itself |
 | `storage.py` | SQLite persistence, export and import |
+| `style.css` | The stylesheet |
 | `prompt.txt` | Grounded generation — full posting in, cited questions out |
 | `prompt_role.txt` | Role mode — role title in, typical questions out, no citations |
 | `prompt_scoring.txt` | Answer scoring against the four-dimension rubric |
@@ -100,7 +107,8 @@ Prompts live in separate text files rather than inside the Python. They are the 
 | v0.1 | Posting in, six questions out | Baseline. One unconstrained prompt; output was generic. |
 | v0.2 | Grounding: every question must quote a phrase from the posting | Generic questions were the core quality problem, and a constraint fixed what prompt-tuning did not. |
 | v0.2 | Answer guidance per question | Knowing the question is not knowing what a good answer contains. |
-| v0.3 | Role mode plus deterministic router | A two-word role title previously produced a refusal. Now it produces useful output, honestly labelled. |
+| v0.3 | Role mode plus deterministic router | A two-word role title previously produced a refusal. Now it produces useful output, honestly labeled. |
 | v0.3 | Answer scoring against a four-dimension rubric | Turned a question generator into something that responds to what you say. |
 | v0.4 | SQLite persistence and per-question comparison | Progress across sessions is the thing a stateless chat cannot offer. |
 | v0.4 | Automatic grounding verification | The app made a claim about its own output; now it checks it. |
+| v0.5 | Named, with a landing page and a visual identity | A tool shown to other people needs to say what it is before it asks for a job posting. |

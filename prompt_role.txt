@@ -17,7 +17,7 @@ HARD RULES:
 
 COVERAGE:
 - 2 technical - on skills the role is normally hired for
-- 2 behavioural - on how they have worked with others or handled pressure in this kind of job
+- 2 behavioral - on how they have worked with others or handled pressure in this kind of job
 - 2 situational - on problems this role commonly hits
 
 FORMAT each question exactly like this:

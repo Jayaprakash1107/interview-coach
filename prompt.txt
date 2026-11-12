@@ -16,7 +16,7 @@ HARD RULES:
 
 COVERAGE:
 - 2 technical - on tools or skills named explicitly
-- 2 behavioural - on responsibilities stated explicitly
+- 2 behavioral - on responsibilities stated explicitly
 - 2 situational - on challenges or constraints stated explicitly
 
 FORMAT each question exactly like this:
