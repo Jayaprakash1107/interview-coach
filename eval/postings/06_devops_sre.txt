@@ -1,0 +1,19 @@
+Site Reliability Engineer
+Remote (EU)
+
+About the role
+Our platform runs on Kubernetes across three regions. You will be responsible
+for the reliability of the services that sit under every product team.
+
+What you will do
+- Own our Kubernetes platform, including cluster upgrades and capacity planning
+- Reduce mean time to recovery, which is currently over 40 minutes
+- Build and maintain Terraform modules that product teams consume
+- Improve our observability stack (Prometheus, Grafana, OpenTelemetry)
+- Lead incident response and write blameless postmortems
+
+Requirements
+- 5+ years in SRE, platform or infrastructure engineering
+- Production experience with Kubernetes beyond running kubectl
+- Strong skills in at least one of Go or Python
+- Experience with infrastructure as code in a team setting

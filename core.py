@@ -66,6 +66,10 @@ def prompts():
     return _prompt("prompt.txt"), _prompt("prompt_role.txt"), _prompt("prompt_scoring.txt")
 
 
+def gaps_prompt():
+    return _prompt("prompt_gaps.txt")
+
+
 def call_model(prompt, temperature=0.4):
     r = get_client().chat.completions.create(
         model=MODEL, temperature=temperature,
@@ -127,6 +131,59 @@ def cite_found(phrase, source_text):
 
 
 # ----------------------------------------------------------------------
+# coverage
+# ----------------------------------------------------------------------
+# Verification answers "is this quote real?". Coverage answers the question
+# that comes next: "what did the questions leave out?" A set of questions can
+# be perfectly grounded and still cluster on two bullets, which is exactly the
+# gap a candidate would walk into unprepared.
+
+def requirement_lines(posting):
+    """The bulleted requirement and responsibility lines of a posting.
+
+    Prose paragraphs are deliberately excluded: a question grounded in the
+    company blurb is not evidence of useful coverage. Wrapped continuation
+    lines are folded back into their bullet, because a posting pasted from a
+    browser is full of them.
+    """
+    lines, buf = [], ""
+    for raw in posting.splitlines():
+        if re.match(r"^\s*[-*\u2022]\s+", raw):
+            if buf:
+                lines.append(buf)
+            buf = re.sub(r"^\s*[-*\u2022]\s+", "", raw).strip()
+        elif buf and raw.startswith(("  ", "\t")) and raw.strip():
+            buf += " " + raw.strip()
+        elif buf:
+            lines.append(buf)
+            buf = ""
+    if buf:
+        lines.append(buf)
+    return [l for l in lines if len(l.split()) >= 3]
+
+
+def coverage(posting, questions):
+    """Pair each requirement line with the questions whose verified citation
+    came from it. Returns (rows, covered_count, total) where each row is
+    {line, nums}. A line with an empty nums list is a gap."""
+    reqs = requirement_lines(posting)
+    rows = [{"line": r, "nums": []} for r in reqs]
+    norm = [normalize(r) for r in reqs]
+
+    for q in questions:
+        cite = q.get("cite")
+        if not cite or not cite_found(cite, posting):
+            continue
+        nc = normalize(cite)
+        for i, nr in enumerate(norm):
+            if nc in nr or nr in nc:
+                rows[i]["nums"].append(q.get("num", "?"))
+
+    covered = sum(1 for r in rows if r["nums"])
+    return rows, covered, len(rows)
+
+
+# ----------------------------------------------------------------------
 # parsing model output
 # ----------------------------------------------------------------------
 def extract_questions(markdown_text):
@@ -171,7 +228,7 @@ def short(text, n=60):
 def init_state():
     for key, default in [
         ("questions", []), ("raw_output", ""), ("jd", ""), ("mode", ""),
-        ("profile", ""),
+        ("profile", ""), ("gap_output", ""),
     ]:
         if key not in st.session_state:
             st.session_state[key] = default

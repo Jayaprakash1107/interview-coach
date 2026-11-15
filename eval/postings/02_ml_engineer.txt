@@ -1,0 +1,21 @@
+Machine Learning Engineer, Ranking
+Remote (US)
+
+What you'll do
+- Own the candidate generation stage of our search ranking pipeline, serving
+  roughly 40 million queries per day
+- Train and evaluate learning-to-rank models using PyTorch, and ship them behind
+  feature flags with online A/B tests
+- Reduce p99 inference latency, which currently sits above our 120ms budget
+- Build offline evaluation sets that correlate with online engagement metrics
+- Partner with the Search Relevance team on query understanding
+
+Requirements
+- 4+ years of experience building production machine learning systems
+- Strong Python, and familiarity with distributed training on GPUs
+- Experience with feature stores and the training/serving skew problems they solve
+- Ability to reason about tradeoffs between model quality and serving cost
+
+Nice to have
+- Experience with approximate nearest neighbour search (FAISS, ScaNN)
+- Published work in information retrieval

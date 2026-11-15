@@ -1,0 +1,18 @@
+Technical Writer, Developer Documentation
+Remote
+
+About the role
+Our API documentation is the main reason developers either adopt us or leave.
+You will own it.
+
+What you will do
+- Write and maintain reference documentation for our REST and GraphQL APIs
+- Build runnable quickstarts in Python, JavaScript and Go
+- Work with engineers to document changes before they ship, not after
+- Own the information architecture of the docs site
+
+Qualifications
+- 3+ years writing developer-facing documentation
+- Ability to read code in at least one language well enough to write about it
+- Experience with docs-as-code workflows and Git
+- Writing samples required

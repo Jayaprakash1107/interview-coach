@@ -1,0 +1,21 @@
+Senior Backend Engineer, Payments
+New York, NY
+
+About the role
+You will work on the services that move money for our merchants. Correctness
+and auditability matter more than velocity here.
+
+Responsibilities
+- Design and build idempotent APIs in Go that handle payment authorization,
+  capture and refund flows
+- Own the reconciliation process against our payment processors, including the
+  daily settlement job
+- Write runbooks and participate in a weekly on-call rotation
+- Lead design reviews and mentor two junior engineers
+
+Qualifications
+- 6+ years of backend experience, with at least 2 in payments, banking or
+  another regulated domain
+- Deep understanding of database transactions, isolation levels and locking
+- Experience with event-driven architectures using Kafka
+- Track record of operating services with strict uptime commitments

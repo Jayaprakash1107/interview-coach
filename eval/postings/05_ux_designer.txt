@@ -1,0 +1,19 @@
+Product Designer
+Austin, TX (hybrid)
+
+About the role
+We are a team of four designers supporting eight engineering squads. You will
+own the design system and the clinician-facing scheduling experience.
+
+Responsibilities
+- Maintain and extend our Figma component library, used by every squad
+- Design the scheduling workflow used by clinic staff, who are often working
+  under time pressure with interruptions
+- Run usability sessions with clinical staff and synthesize findings
+- Partner with engineering on accessibility, including WCAG 2.1 AA compliance
+
+Qualifications
+- 4+ years designing complex workflow software, not marketing sites
+- Portfolio showing how you handled a genuinely constrained problem
+- Experience with design systems at scale
+- Familiarity with healthcare settings is preferred but not required

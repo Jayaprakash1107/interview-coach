@@ -1,0 +1,16 @@
+Data Engineer
+Chicago, IL
+
+Responsibilities
+- Build and maintain batch pipelines in Airflow that feed our analytics warehouse
+- Migrate legacy pipelines from Redshift to Snowflake without breaking downstream
+  dashboards
+- Implement data quality checks and alerting so that silent failures stop reaching
+  business users
+- Model data using dbt and maintain documentation for analyst consumers
+
+Qualifications
+- 3+ years of experience with SQL in a production analytics environment
+- Experience with Airflow or a comparable orchestrator
+- Familiarity with dimensional modeling
+- Ability to work with analysts to understand how data will actually be used

@@ -229,6 +229,76 @@ span[class*="material-symbols"],
   line-height: 1.55;
   color: var(--ink-soft);
 }
+/* ======================================================================
+   Coverage — what the questions did and did not reach
+
+   Verification is per question. This is the view across the whole posting,
+   so the gaps are visible as gaps rather than as an absence.
+   ====================================================================== */
+.ic-cov {
+  margin: 2.2rem 0 1.4rem;
+  border-top: 2px solid var(--ink);
+  padding-top: 1rem;
+}
+
+.ic-cov-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.ic-cov-head .n {
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.ic-cov-head .lbl { font-size: 0.95rem; color: var(--ink-soft); }
+
+.ic-cov-note {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0.15rem 0 0.9rem;
+}
+
+.ic-cov-list { border-top: 1px solid var(--rule); }
+
+.ic-cov-row {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.55rem 0 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  border-left: 2px solid transparent;
+}
+.ic-cov-row .k {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+.ic-cov-row .t {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.ic-cov-row.ok  { border-left-color: var(--verified); }
+.ic-cov-row.ok  .k { color: var(--verified); }
+.ic-cov-row.ok  .t { color: var(--ink); }
+
+/* A gap is shown in the same muted grey as secondary text rather than in the
+   flag red. Red means a citation was claimed and was not there; nothing has
+   gone wrong here, there is simply nothing covering this line yet. */
+.ic-cov-row.gap { background: var(--paper-deep); }
+.ic-cov-row.gap .k { color: var(--ink-faint); }
+.ic-cov-row.gap .t { color: var(--ink-soft); }
+
+@media (max-width: 640px) {
+  .ic-cov-row { grid-template-columns: 1.8rem 1fr; gap: 0.6rem; }
+}
+
 /* what a strong / weak answer sounds like */
 .ic-guide {
   margin: 0.95rem 0 0 2.25rem;

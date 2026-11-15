@@ -1,0 +1,20 @@
+Product Manager, Onboarding
+San Francisco, CA
+
+The opportunity
+Activation is our biggest leak. Fewer than a third of signups reach the point
+where they see value. You will own that problem end to end.
+
+What you will do
+- Define and track the activation metric, and be accountable for moving it
+- Run discovery interviews with new users and translate what you hear into a
+  prioritized roadmap
+- Work with design and engineering to ship experiments weekly
+- Communicate results and tradeoffs to the executive team
+
+What we are looking for
+- 3+ years of product management experience in a B2B SaaS environment
+- Comfort with SQL and experimentation frameworks; you should be able to pull
+  your own numbers
+- Experience running a structured discovery process
+- Strong written communication; we write memos, not slide decks

@@ -109,6 +109,41 @@ def question_card(q, verified=None):
     return "".join(parts)
 
 
+def coverage_block(rows, covered, total):
+    """A checklist of the posting's requirements, each marked with the question
+    that drew on it, or left open. The gaps are the point of the component."""
+    if not total:
+        return ""
+
+    items = []
+    for r in rows:
+        if r["nums"]:
+            key = ", ".join(str(n) for n in r["nums"])
+            items.append(
+                f'<div class="ic-cov-row ok"><span class="k">{html.escape(key)}</span>'
+                f'<span class="t">{html.escape(r["line"])}</span></div>')
+        else:
+            items.append(
+                '<div class="ic-cov-row gap"><span class="k">&mdash;</span>'
+                f'<span class="t">{html.escape(r["line"])}</span></div>')
+
+    missed = total - covered
+    if missed:
+        note = (f"{missed} requirement{'s' if missed != 1 else ''} in this posting "
+                f"{'have' if missed != 1 else 'has'} no question yet.")
+    else:
+        note = "Every requirement in this posting has at least one question."
+
+    return (
+        '<div class="ic-cov">'
+        f'<div class="ic-cov-head"><span class="n">{covered}/{total}</span>'
+        f'<span class="lbl">requirements covered</span></div>'
+        f'<div class="ic-cov-note">{html.escape(note)}</div>'
+        f'<div class="ic-cov-list">{"".join(items)}</div>'
+        "</div>"
+    )
+
+
 def check_strip(ok, total):
     """The headline verification result."""
     if ok == total:

@@ -1,0 +1,14 @@
+QA Automation Engineer
+Toronto, ON
+
+Responsibilities
+- Build and maintain end-to-end test suites using Playwright
+- Reduce our test suite runtime, which currently blocks deploys for 50 minutes
+- Triage flaky tests and drive down the flake rate
+- Work with developers to improve testability of new features
+
+Requirements
+- 3+ years in test automation
+- Strong JavaScript or TypeScript
+- Experience integrating test suites into CI pipelines
+- Ability to advocate for quality without becoming a bottleneck

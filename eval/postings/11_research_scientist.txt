@@ -1,0 +1,18 @@
+Research Scientist, Speech
+Seattle, WA
+
+About the role
+Our speech team works on recognition quality for low-resource languages.
+
+Responsibilities
+- Design and run experiments on acoustic and language modeling for languages
+  with under 100 hours of labelled audio
+- Publish findings at venues such as Interspeech and ICASSP
+- Transfer successful research into the production recognition stack
+- Mentor interns and collaborate with engineering on evaluation infrastructure
+
+Qualifications
+- PhD in speech, machine learning or a related field, or equivalent experience
+- Publication record in speech or language processing
+- Strong experimental discipline, including careful ablation studies
+- Experience with self-supervised pretraining approaches

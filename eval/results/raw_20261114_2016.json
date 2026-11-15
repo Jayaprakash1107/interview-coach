@@ -1,0 +1,1130 @@
+[
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 4,
+  "precision": 0.6666666666666666,
+  "grounded_rate": 0.6666666666666666,
+  "requirements": 8,
+  "requirements_covered": 4,
+  "coverage": 0.5,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you built and maintained dashboards in Tableau that track retention, churn, and expansion revenue?",
+    "cite": "Build and maintain dashboards in Tableau covering retention, churn and expansion revenue",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a time when you wrote and optimized SQL against a Snowflake warehouse, especially for models that other analysts depend on?",
+    "cite": "Write and optimize SQL against a Snowflake warehouse, including models that other analysts depend on",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a situation where you partnered with non\u2011technical stakeholders to turn vague questions into measurable analyses and then presented the findings to directors.",
+    "cite": "Partner with non-technical stakeholders to turn vague questions into measurable analyses, and present findings to directors",
+    "verified": true
+   },
+   {
+    "question": "Describe how you have investigated data\u2011quality issues and driven them to resolution with the data engineering team.",
+    "cite": "Investigate data quality issues and drive them to resolution with the data engineering team",
+    "verified": true
+   },
+   {
+    "question": "Imagine a director asks for insight on why churn has increased, but the request is vague and the underlying data is spread across product and billing tables. How would you turn that vague question into a measurable analysis?",
+    "cite": "turn vague questions into measurable analyses\u201d (from the partnership responsibility) and \u201craw product and billing data\u201d (from the role description)",
+    "verified": false
+   },
+   {
+    "question": "Suppose you discover that a Snowflake model you built, which other analysts rely on, is producing incorrect expansion\u2011revenue numbers due to a data\u2011quality bug. What actions would you take to resolve the issue and communicate the impact?",
+    "cite": "including models that other analysts depend on\u201d and \u201cInvestigate data quality issues and drive them to resolution with the data engineering team",
+    "verified": false
+   }
+  ],
+  "posting": "01_data_analyst",
+  "arm": "grounded",
+  "raw": "**1. How have you built and maintained dashboards in Tableau that track retention, churn, and expansion revenue?**  \n- Grounded in: \u201cBuild and maintain dashboards in Tableau covering retention, churn and expansion revenue\u201d  \n- Strong answer includes: specific examples of Tableau dashboard projects, the data sources used, metrics defined for retention/churn/expansion, how you ensured accuracy and refresh schedules, and any performance\u2011tuning or user\u2011adoption steps you took.  \n- Weak answer sounds like: \u201cI\u2019ve used Tableau before and made some charts for churn.\u201d  \n\n**2. Can you describe a time when you wrote and optimized SQL against a Snowflake warehouse, especially for models that other analysts depend on?**  \n- Grounded in: \u201cWrite and optimize SQL against a Snowflake warehouse, including models that other analysts depend on\u201d  \n- Strong answer includes: details of the Snowflake environment (e.g., virtual warehouses, clustering), the complexity of the SQL (CTEs, window functions, materialized views), how you measured and improved query performance, and how you documented/handed off the model to peers.  \n- Weak answer sounds like: \u201cI know SQL and have used Snowflake a little.\u201d  \n\n**3. Tell me about a situation where you partnered with non\u2011technical stakeholders to turn vague questions into measurable analyses and then presented the findings to directors.**  \n- Grounded in: \u201cPartner with non-technical stakeholders to turn vague questions into measurable analyses, and present findings to directors\u201d  \n- Strong answer includes: the stakeholder\u2019s original ambiguous request, the clarification process you used (e.g., scoping, defining KPIs), the analytical method you applied, the visualization or report delivered, and the impact or decision that resulted at the director level.  \n- Weak answer sounds like: \u201cI usually just answer whatever they ask.\u201d  \n\n**4. Describe how you have investigated data\u2011quality issues and driven them to resolution with the data engineering team.**  \n- Grounded in: \u201cInvestigate data quality issues and drive them to resolution with the data engineering team\u201d  \n- Strong answer includes: a concrete data\u2011quality problem (missing values, mismatched IDs, stale records), the diagnostic steps (profiling, data lineage checks), how you communicated the issue to engineers, the remediation actions taken, and verification that the issue was fixed.  \n- Weak answer sounds like: \u201cI tell the engineers when something looks wrong.\u201d  \n\n**5. Imagine a director asks for insight on why churn has increased, but the request is vague and the underlying data is spread across product and billing tables. How would you turn that vague question into a measurable analysis?**  \n- Grounded in: \u201cturn vague questions into measurable analyses\u201d (from the partnership responsibility) and \u201craw product and billing data\u201d (from the role description)  \n- Strong answer includes: steps to clarify the business goal, identify relevant tables/fields, define a churn metric, build a reproducible SQL/Python pipeline, validate data quality, and present actionable findings.  \n- Weak answer sounds like: \u201cI would just pull whatever data I think is relevant and make a chart.\u201d  \n\n**6. Suppose you discover that a Snowflake model you built, which other analysts rely on, is producing incorrect expansion\u2011revenue numbers due to a data\u2011quality bug. What actions would you take to resolve the issue and communicate the impact?**  \n- Grounded in: \u201cincluding models that other analysts depend on\u201d and \u201cInvestigate data quality issues and drive them to resolution with the data engineering team\u201d  \n- Strong answer includes: immediate steps to isolate the bug, collaboration with data engineers to fix the source issue, version\u2011control or rollback of the model, notifying downstream analysts and stakeholders, and implementing safeguards (tests, monitoring) to prevent recurrence.  \n- Weak answer sounds like: \u201cI would fix the model and hope nobody notices.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 4,
+  "precision": 0.6666666666666666,
+  "grounded_rate": 0.6666666666666666,
+  "requirements": 8,
+  "requirements_covered": 4,
+  "coverage": 0.5,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you designed and maintained Tableau dashboards that track retention, churn, and expansion revenue?",
+    "cite": "Build and maintain dashboards in Tableau covering retention, churn and expansion revenue",
+    "verified": true
+   },
+   {
+    "question": "Describe a situation where you wrote a complex SQL query or model in Snowflake that other analysts relied on. What challenges did you face and how did you ensure its reliability?",
+    "cite": "Write and optimize SQL against a Snowflake warehouse, including models that other analysts depend on",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you turned a vague, non\u2011technical request into a measurable analysis and presented the findings to senior leadership.",
+    "cite": "Partner with non\u2011technical stakeholders to turn vague questions into measurable analyses, and present findings to directors",
+    "verified": false
+   },
+   {
+    "question": "Can you give an example of how you identified a data\u2011quality issue, collaborated with the data\u2011engineering team, and drove it to resolution?",
+    "cite": "Investigate data quality issues and drive them to resolution with the data engineering team",
+    "verified": true
+   },
+   {
+    "question": "How have you communicated analytical findings to a non\u2011technical audience, and what techniques do you use to ensure clarity and impact?",
+    "cite": "Demonstrated ability to communicate findings clearly to a non\u2011technical audience",
+    "verified": false
+   },
+   {
+    "question": "What role has Python played in your analytical workflow, and can you describe a project where it added significant value?",
+    "cite": "Experience with Python for analysis is preferred",
+    "verified": true
+   }
+  ],
+  "posting": "01_data_analyst",
+  "arm": "naive",
+  "raw": "**1. How have you designed and maintained Tableau dashboards that track retention, churn, and expansion revenue?**  \n- Grounded in: \u201cBuild and maintain dashboards in Tableau covering retention, churn and expansion revenue\u201d  \n- Strong answer includes: a concrete example of a dashboard project (scope, metrics, data sources), the process for gathering requirements, design decisions (visual best practices), how they ensured data freshness and performance, and a measurable impact (e.g., reduced reporting latency by\u202f30\u202f% or enabled a specific business decision).  \n- Weak answer sounds like: \u201cI\u2019ve used Tableau before and made a few charts. I just follow the template and it works.\u201d\n\n---\n\n**2. Describe a situation where you wrote a complex SQL query or model in Snowflake that other analysts relied on. What challenges did you face and how did you ensure its reliability?**  \n- Grounded in: \u201cWrite and optimize SQL against a Snowflake warehouse, including models that other analysts depend on\u201d  \n- Strong answer includes: details of the business problem, the SQL logic (joins, window functions, CTEs), performance tuning steps (clustering keys, result caching), testing/validation methods (unit tests, peer reviews), documentation, and how the model was handed off and used by teammates.  \n- Weak answer sounds like: \u201cI can write SELECT statements in Snowflake. I just make sure it runs without errors.\u201d\n\n---\n\n**3. Tell me about a time you turned a vague, non\u2011technical request into a measurable analysis and presented the findings to senior leadership.**  \n- Grounded in: \u201cPartner with non\u2011technical stakeholders to turn vague questions into measurable analyses, and present findings to directors\u201d  \n- Strong answer includes: the initial ambiguous request, the clarification process (questions asked, stakeholder interviews), the analytical approach (data selection, methodology), the visualization or storytelling technique used, and the outcome (decision made, revenue impact, process change).  \n- Weak answer sounds like: \u201cI asked them what they wanted, did some analysis, and sent them a PDF.\u201d\n\n---\n\n**4. Can you give an example of how you identified a data\u2011quality issue, collaborated with the data\u2011engineering team, and drove it to resolution?**  \n- Grounded in: \u201cInvestigate data quality issues and drive them to resolution with the data engineering team\u201d  \n- Strong answer includes: the symptom of the data problem, diagnostic steps (data profiling, SQL checks), communication with engineers (ticketing, joint debugging), the fix implemented (pipeline change, validation rule), and verification that the issue was resolved (post\u2011mortem metrics).  \n- Weak answer sounds like: \u201cWhen I see bad data I just tell the engineers and they fix it.\u201d\n\n---\n\n**5. How have you communicated analytical findings to a non\u2011technical audience, and what techniques do you use to ensure clarity and impact?**  \n- Grounded in: \u201cDemonstrated ability to communicate findings clearly to a non\u2011technical audience\u201d  \n- Strong answer includes: specific storytelling frameworks (e.g., problem\u2011action\u2011result), use of visual aids (charts, analogies), tailoring language to the audience, feedback loops (checking understanding), and evidence of the audience taking action based on the insight.  \n- Weak answer sounds like: \u201cI just show them the numbers and explain what they mean.\u201d\n\n---\n\n**6. What role has Python played in your analytical workflow, and can you describe a project where it added significant value?**  \n- Grounded in: \u201cExperience with Python for analysis is preferred\u201d  \n- Strong answer includes: the Python libraries used (pandas, NumPy, scikit\u2011learn, etc.), the problem solved (e.g., data cleaning, statistical modeling, automation), how the Python solution improved efficiency or insight compared to pure SQL/Tableau, and any reproducibility practices (notebooks, version control).  \n- Weak answer sounds like: \u201cI know Python a little and have used it for some scripts.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 11,
+  "requirements_covered": 6,
+  "coverage": 0.5454545454545454,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you *trained and evaluated learning\u2011to\u2011rank models using PyTorch, and shipped them behind feature flags with online A/B tests* in a production system?",
+    "cite": "Train and evaluate learning-to-rank models using PyTorch, and ship them behind feature flags with online A/B tests",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a situation where you *leveraged feature stores and addressed the training/serving skew problems they solve*?",
+    "cite": "Experience with feature stores and the training/serving skew problems they solve",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you *owned the candidate generation stage of our search ranking pipeline, serving roughly 40 million queries per day* and what you did to keep it reliable.",
+    "cite": "Own the candidate generation stage of our search ranking pipeline, serving roughly 40 million queries per day",
+    "verified": true
+   },
+   {
+    "question": "Describe how you *partnered with the Search Relevance team on query understanding* in a past role.",
+    "cite": "Partner with the Search Relevance team on query understanding",
+    "verified": true
+   },
+   {
+    "question": "What approach would you take to *reduce p99 inference latency, which currently sits above our 120 ms budget*?",
+    "cite": "Reduce p99 inference latency, which currently sits above our 120ms budget",
+    "verified": true
+   },
+   {
+    "question": "How do you *reason about tradeoffs between model quality and serving cost* when deciding which model to deploy?",
+    "cite": "Ability to reason about tradeoffs between model quality and serving cost",
+    "verified": true
+   }
+  ],
+  "posting": "02_ml_engineer",
+  "arm": "grounded",
+  "raw": "**1. How have you\u202f*trained and evaluated learning\u2011to\u2011rank models using PyTorch, and shipped them behind feature flags with online A/B tests*\u202fin a production system?**  \n- Grounded in: \u201cTrain and evaluate learning-to-rank models using PyTorch, and ship them behind feature flags with online A/B tests\u201d  \n- Strong answer includes: specific project details, PyTorch model architecture, data pipeline, how feature flags were implemented (e.g., LaunchDarkly, internal system), design of A/B test (sample size, metrics, duration), results and lessons learned.  \n- Weak answer sounds like: \u201cI have used PyTorch and done A/B tests before.\u201d  \n\n**2. Can you describe a situation where you\u202f*leveraged feature stores and addressed the training/serving skew problems they solve*?**  \n- Grounded in: \u201cExperience with feature stores and the training/serving skew problems they solve\u201d  \n- Strong answer includes: name of feature store (e.g., Feast, Tecton), how features were materialized for training vs. serving, concrete steps taken to detect and mitigate skew (e.g., versioned pipelines, offline\u2011online consistency checks), impact on model performance.  \n- Weak answer sounds like: \u201cI know what feature stores are and I\u2019ve heard about skew.\u201d  \n\n**3. Tell me about a time you\u202f*owned the candidate generation stage of our search ranking pipeline, serving roughly 40\u202fmillion queries per day*\u202fand what you did to keep it reliable.**  \n- Grounded in: \u201cOwn the candidate generation stage of our search ranking pipeline, serving roughly 40 million queries per day\u201d  \n- Strong answer includes: scope of ownership, monitoring & alerting set\u2011up, scaling strategies (sharding, caching), incident response examples, quantitative reliability metrics (e.g., uptime, error rate).  \n- Weak answer sounds like: \u201cI have managed large pipelines before.\u201d  \n\n**4. Describe how you\u202f*partnered with the Search Relevance team on query understanding*\u202fin a past role.**  \n- Grounded in: \u201cPartner with the Search Relevance team on query understanding\u201d  \n- Strong answer includes: cross\u2011team communication methods, joint problem\u2011definition sessions, shared data artifacts, concrete outcomes (e.g., improved query intent classification, new features), and how conflicts were resolved.  \n- Weak answer sounds like: \u201cI like working with other teams.\u201d  \n\n**5. What approach would you take to\u202f*reduce p99 inference latency, which currently sits above our 120\u202fms budget*?**  \n- Grounded in: \u201cReduce p99 inference latency, which currently sits above our 120ms budget\u201d  \n- Strong answer includes: profiling techniques (e.g., flame graphs, latency histograms), model optimization (quantization, pruning, distillation), serving stack improvements (batching, async I/O, hardware acceleration), and a plan to measure impact on the p99 metric.  \n- Weak answer sounds like: \u201cI would try to make the model faster.\u201d  \n\n**6. How do you\u202f*reason about tradeoffs between model quality and serving cost*\u202fwhen deciding which model to deploy?**  \n- Grounded in: \u201cAbility to reason about tradeoffs between model quality and serving cost\u201d  \n- Strong answer includes: framework for evaluating trade\u2011offs (e.g., cost\u2011benefit matrix, ROI calculations), concrete examples of cost drivers (GPU memory, latency), how business metrics guided the decision, and any A/B test results that validated the choice.  \n- Weak answer sounds like: \u201cI would just pick the best model.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 5,
+  "precision": 0.8333333333333334,
+  "grounded_rate": 0.8333333333333334,
+  "requirements": 11,
+  "requirements_covered": 5,
+  "coverage": 0.45454545454545453,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How would you design, implement, and maintain the candidate\u2011generation stage of a search ranking pipeline that handles ~40 million queries per day?",
+    "cite": "Own the candidate generation stage of our search ranking pipeline, serving roughly 40 million queries per day",
+    "verified": true
+   },
+   {
+    "question": "Walk us through your process for training and evaluating learning\u2011to\u2011rank (LTR) models in PyTorch, and how you would ship them behind feature flags for online A/B testing.",
+    "cite": "Train and evaluate learning-to-rank models using PyTorch, and ship them behind feature flags with online A/B tests",
+    "verified": true
+   },
+   {
+    "question": "What techniques would you apply to bring the p99 inference latency from >120 ms down to meet a 120 ms budget, and how would you measure success?",
+    "cite": "Reduce p99 inference latency, which currently sits above our 120ms budget",
+    "verified": true
+   },
+   {
+    "question": "How do you construct offline evaluation sets that reliably correlate with online engagement metrics, and why is this important?",
+    "cite": "Build offline evaluation sets that correlate with online engagement metrics",
+    "verified": true
+   },
+   {
+    "question": "Describe a situation where you had to balance model quality against serving cost. What trade\u2011offs did you consider and how did you decide?",
+    "cite": "Ability to reason about tradeoffs between model quality and serving cost",
+    "verified": true
+   },
+   {
+    "question": "Have you worked with approximate nearest\u2011neighbour (ANN) libraries such as FAISS or ScaNN? If so, explain how you integrated them into a retrieval system and what challenges you faced.",
+    "cite": "Experience with approximate nearest neighbour search (FAISS, ScaNN)\u201d (nice\u2011to\u2011have)",
+    "verified": false
+   }
+  ],
+  "posting": "02_ml_engineer",
+  "arm": "naive",
+  "raw": "**1. How would you design, implement, and maintain the candidate\u2011generation stage of a search ranking pipeline that handles ~40\u202fmillion queries per day?**  \n- Grounded in: \u201cOwn the candidate generation stage of our search ranking pipeline, serving roughly 40\u202fmillion queries per day\u201d  \n- Strong answer includes: a clear end\u2011to\u2011end architecture (e.g., retrieval index, ANN or inverted index, fallback heuristics), discussion of scalability (sharding, load balancing, caching), monitoring & alerting for latency/throughput, strategies for incremental updates, and examples of past systems built at similar scale.  \n- Weak answer sounds like: \u201cI would just write a Python script that queries the database and returns results,\u201d with no mention of scalability, reliability, or operational concerns.\n\n---\n\n**2. Walk us through your process for training and evaluating learning\u2011to\u2011rank (LTR) models in PyTorch, and how you would ship them behind feature flags for online A/B testing.**  \n- Grounded in: \u201cTrain and evaluate learning-to-rank models using PyTorch, and ship them behind feature flags with online A/B tests\u201d  \n- Strong answer includes: data preprocessing (pairwise/listwise loss), model architecture choices for LTR, training pipeline (distributed GPU training, checkpointing), offline metrics (NDCG, MAP), integration with a feature\u2011flag system (e.g., LaunchDarkly, internal rollout), experiment design (randomization, statistical power), and handling rollback.  \n- Weak answer sounds like: \u201cI would just train a model in PyTorch and then push it to production,\u201d without detailing evaluation metrics, A/B design, or feature\u2011flag mechanics.\n\n---\n\n**3. What techniques would you apply to bring the p99 inference latency from >120\u202fms down to meet a 120\u202fms budget, and how would you measure success?**  \n- Grounded in: \u201cReduce p99 inference latency, which currently sits above our 120ms budget\u201d  \n- Strong answer includes: profiling the serving stack, model quantization/pruning, batch size tuning, GPU/CPU inference optimizations, caching frequent queries, using compiled runtimes (TorchScript, ONNX Runtime), latency\u2011aware model architecture, and establishing latency SLOs with monitoring dashboards. Success is measured by sustained p99 <\u202f120\u202fms under production load.  \n- Weak answer sounds like: \u201cI would just make the model smaller,\u201d with no systematic analysis, measurement plan, or awareness of trade\u2011offs.\n\n---\n\n**4. How do you construct offline evaluation sets that reliably correlate with online engagement metrics, and why is this important?**  \n- Grounded in: \u201cBuild offline evaluation sets that correlate with online engagement metrics\u201d  \n- Strong answer includes: sampling strategies that reflect live traffic (temporal splits, query distribution matching), labeling via implicit feedback (clicks, dwell time) or human judgments, validation of correlation (Pearson/Spearman, calibration curves), iterative refinement, and discussion of why offline\u2011online correlation prevents misleading model selection.  \n- Weak answer sounds like: \u201cI would just use a random hold\u2011out set and compute accuracy,\u201d ignoring correlation, bias, and relevance to live metrics.\n\n---\n\n**5. Describe a situation where you had to balance model quality against serving cost. What trade\u2011offs did you consider and how did you decide?**  \n- Grounded in: \u201cAbility to reason about tradeoffs between model quality and serving cost\u201d  \n- Strong answer includes: concrete example (e.g., choosing a deeper transformer vs. a shallow tree), quantifying quality gains (\u0394\u202fNDCG) vs. incremental cost (GPU memory, latency, monetary cost), using cost\u2011aware objective functions or budget constraints, stakeholder communication, and final decision based on business impact.  \n- Weak answer sounds like: \u201cI would always pick the best\u2011performing model,\u201d with no discussion of cost, latency, or business considerations.\n\n---\n\n**6. Have you worked with approximate nearest\u2011neighbour (ANN) libraries such as FAISS or ScaNN? If so, explain how you integrated them into a retrieval system and what challenges you faced.**  \n- Grounded in: \u201cExperience with approximate nearest neighbour search (FAISS, ScaNN)\u201d (nice\u2011to\u2011have)  \n- Strong answer includes: index building (training, quantization, IVF, HNSW), handling updates/re\u2011indexing, GPU vs. CPU trade\u2011offs, latency/recall tuning, integration with downstream ranking, and challenges like memory footprint, batch query handling, or consistency across shards.  \n- Weak answer sounds like: \u201cI have heard of FAISS,\u201d or \u201cI used it once without any issues,\u201d lacking depth on integration or problem\u2011solving."
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you designed and built idempotent APIs in Go that handle payment authorization, capture, and refund flows?",
+    "cite": "Design and build idempotent APIs in Go that handle payment authorization, capture and refund flows",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a production system you built using event\u2011driven architectures with Kafka?",
+    "cite": "Experience with event-driven architectures using Kafka",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you led design reviews and mentored two junior engineers.",
+    "cite": "Lead design reviews and mentor two junior engineers",
+    "verified": true
+   },
+   {
+    "question": "What is your approach to writing runbooks and participating in a weekly on\u2011call rotation?",
+    "cite": "Write runbooks and participate in a weekly on-call rotation",
+    "verified": true
+   },
+   {
+    "question": "How do you ensure correctness and auditability when velocity is less important?",
+    "cite": "Correctness and auditability matter more than velocity here.",
+    "verified": true
+   },
+   {
+    "question": "Describe how you have operated services with strict uptime commitments.",
+    "cite": "Track record of operating services with strict uptime commitments",
+    "verified": true
+   }
+  ],
+  "posting": "03_backend_engineer",
+  "arm": "grounded",
+  "raw": "**1. How have you designed and built idempotent APIs in Go that handle payment authorization, capture, and refund flows?**  \n- Grounded in: \u201cDesign and build idempotent APIs in Go that handle payment authorization, capture and refund flows\u201d  \n- Strong answer includes: a clear definition of idempotency, specific Go patterns or libraries used (e.g., middleware, token\u2011based deduplication), how state is persisted, handling of edge cases (retries, network failures), and evidence of successful deployment in a payments context.  \n- Weak answer sounds like: \u201cI just make the endpoints and they work,\u201d with no detail on idempotency mechanisms or Go\u2011specific implementation.\n\n**2. Can you describe a production system you built using event\u2011driven architectures with Kafka?**  \n- Grounded in: \u201cExperience with event-driven architectures using Kafka\u201d  \n- Strong answer includes: architecture diagram, topics design, partitioning strategy, consumer groups, handling of ordering and exactly\u2011once semantics, monitoring, and how the system met reliability requirements.  \n- Weak answer sounds like: \u201cI have used Kafka before,\u201d without depth on design decisions or operational experience.\n\n**3. Tell me about a time you led design reviews and mentored two junior engineers.**  \n- Grounded in: \u201cLead design reviews and mentor two junior engineers\u201d  \n- Strong answer includes: specific review processes (e.g., checklist, PR standards), how feedback was given, measurable impact on code quality or delivery speed, mentoring activities (pair programming, goal setting), and outcomes for the junior engineers.  \n- Weak answer sounds like: \u201cI usually review code and help them when they ask,\u201d with no concrete structure or results.\n\n**4. What is your approach to writing runbooks and participating in a weekly on\u2011call rotation?**  \n- Grounded in: \u201cWrite runbooks and participate in a weekly on-call rotation\u201d  \n- Strong answer includes: methodology for documenting incident response steps, version control of runbooks, how you keep them up\u2011to\u2011date, examples of incidents you handled on\u2011call, and how you balance on\u2011call duties with other work.  \n- Weak answer sounds like: \u201cI write simple docs and answer pages,\u201d lacking detail on rigor, maintenance, or real on\u2011call experience.\n\n**5. How do you ensure correctness and auditability when velocity is less important?**  \n- Grounded in: \u201cCorrectness and auditability matter more than velocity here.\u201d  \n- Strong answer includes: testing strategies (unit, integration, property\u2011based), formal verification or code reviews focused on edge cases, immutable logs, audit trails, and trade\u2011off decisions that prioritize reliability over speed.  \n- Weak answer sounds like: \u201cI just test enough,\u201d without explaining specific practices that elevate correctness and auditability.\n\n**6. Describe how you have operated services with strict uptime commitments.**  \n- Grounded in: \u201cTrack record of operating services with strict uptime commitments\u201d  \n- Strong answer includes: SLA targets, monitoring and alerting stack, incident management processes, capacity planning, redundancy (e.g., multi\u2011AZ, failover), and concrete metrics showing uptime performance.  \n- Weak answer sounds like: \u201cI try to keep services up,\u201d with no metrics, processes, or examples of meeting strict uptime."
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 5,
+  "precision": 0.8333333333333334,
+  "grounded_rate": 0.8333333333333334,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How do you design an idempotent API in Go for payment authorization, and what safeguards do you put in place to guarantee correctness?",
+    "cite": "Design and build idempotent APIs in Go that handle payment authorization, capture and refund flows",
+    "verified": true
+   },
+   {
+    "question": "Walk us through the end\u2011to\u2011end reconciliation process you\u2019ve built between a payment processor and internal systems. What were the biggest challenges and how did you solve them?",
+    "cite": "Own the reconciliation process against our payment processors, including the daily settlement job",
+    "verified": true
+   },
+   {
+    "question": "What key elements do you include in a runbook for a critical payment service, and how do you ensure it stays useful for on\u2011call engineers?",
+    "cite": "Write runbooks and participate in a weekly on-call rotation",
+    "verified": true
+   },
+   {
+    "question": "How have you led design reviews and mentored junior engineers on complex backend projects? Give a concrete example.",
+    "cite": "Lead design reviews and mentor two junior engineers",
+    "verified": true
+   },
+   {
+    "question": "Explain how you manage database transaction isolation and locking in a high\u2011throughput payment system. Which isolation level do you prefer and why?",
+    "cite": "Deep understanding of database transactions, isolation levels and locking",
+    "verified": true
+   },
+   {
+    "question": "Describe a production system you built that uses Kafka for event\u2011driven payment processing. How did you ensure reliability and exactly\u2011once semantics?",
+    "cite": "Experience with event\u2011driven architectures using Kafka",
+    "verified": false
+   }
+  ],
+  "posting": "03_backend_engineer",
+  "arm": "naive",
+  "raw": "**1. How do you design an idempotent API in Go for payment authorization, and what safeguards do you put in place to guarantee correctness?**  \n- Grounded in: \u201cDesign and build idempotent APIs in Go that handle payment authorization, capture and refund flows\u201d  \n- Strong answer includes: a clear explanation of using idempotency keys (client\u2011supplied or generated), storing request fingerprints in a durable store, handling retries safely, leveraging Go\u2019s concurrency primitives correctly, and describing how the implementation is tested (unit, integration, property\u2011based) and audited. The candidate also mentions edge cases (e.g., network partitions, duplicate keys) and how they ensure the API remains deterministic.  \n- Weak answer sounds like: \u201cI\u2019d just make the endpoint stateless and rely on Go\u2019s standard library; if the client sends the same request twice it will be fine.\u201d  \n\n---\n\n**2. Walk us through the end\u2011to\u2011end reconciliation process you\u2019ve built between a payment processor and internal systems. What were the biggest challenges and how did you solve them?**  \n- Grounded in: \u201cOwn the reconciliation process against our payment processors, including the daily settlement job\u201d  \n- Strong answer includes: description of pulling settlement files or APIs from the processor, matching them to internal transaction records using composite keys, handling mismatches, dealing with time\u2011zone and currency rounding issues, implementing a robust retry/alerting mechanism, and automating the daily job (e.g., scheduled batch, idempotent processing). The candidate also discusses monitoring, audit trails, and how they validated correctness (reconciliation reports, manual spot\u2011checks).  \n- Weak answer sounds like: \u201cI\u2019d just compare the amounts and mark everything as settled; if something doesn\u2019t match I\u2019d investigate later.\u201d  \n\n---\n\n**3. What key elements do you include in a runbook for a critical payment service, and how do you ensure it stays useful for on\u2011call engineers?**  \n- Grounded in: \u201cWrite runbooks and participate in a weekly on-call rotation\u201d  \n- Strong answer includes: step\u2011by\u2011step troubleshooting flow, clear escalation paths, required credentials and access locations, log\u2011search queries, health\u2011check commands, rollback procedures, and verification steps after a fix. The candidate mentions version control of runbooks, regular \u201crunbook drills,\u201d keeping them up\u2011to\u2011date after post\u2011mortems, and tailoring them for different severity levels.  \n- Weak answer sounds like: \u201cI\u2019d just write a short doc that says \u2018check the logs and restart the service if needed.\u2019\u201d  \n\n---\n\n**4. How have you led design reviews and mentored junior engineers on complex backend projects? Give a concrete example.**  \n- Grounded in: \u201cLead design reviews and mentor two junior engineers\u201d  \n- Strong answer includes: setting clear review criteria (performance, security, idempotency, observability), facilitating constructive discussions, documenting decisions, assigning action items, and following up. For mentorship, the candidate describes pairing sessions, code\u2011review feedback loops, growth plans, and a specific instance where a junior engineer\u2019s contribution was elevated through guidance.  \n- Weak answer sounds like: \u201cI usually just approve pull requests and tell the junior devs to ask me if they have questions.\u201d  \n\n---\n\n**5. Explain how you manage database transaction isolation and locking in a high\u2011throughput payment system. Which isolation level do you prefer and why?**  \n- Grounded in: \u201cDeep understanding of database transactions, isolation levels and locking\u201d  \n- Strong answer includes: discussion of the trade\u2011offs between READ COMMITTED, REPEATABLE READ, and SERIALIZABLE, why they chose (e.g., SERIALIZABLE for financial correctness with explicit dead\u2011lock handling, or REPEATABLE READ with explicit row\u2011level locks). The candidate talks about using optimistic concurrency control, version columns, handling lock contention, and measuring impact on latency. They also mention testing strategies (stress tests, simulation of contention).  \n- Weak answer sounds like: \u201cI always use the default isolation level; it works fine.\u201d  \n\n---\n\n**6. Describe a production system you built that uses Kafka for event\u2011driven payment processing. How did you ensure reliability and exactly\u2011once semantics?**  \n- Grounded in: \u201cExperience with event\u2011driven architectures using Kafka\u201d  \n- Strong answer includes: architecture diagram (producers, topics, consumer groups), use of idempotent producers, transactional writes, proper partitioning strategy, handling consumer rebalance, committing offsets only after processing succeeds, and monitoring lag and dead\u2011letter queues. The candidate also explains how they dealt with schema evolution (e.g., Avro/Schema Registry) and what metrics/alerts they set up to meet strict uptime commitments.  \n- Weak answer sounds like: \u201cWe just push events to Kafka and the consumers read them; if something fails we\u2019ll fix it later.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 0,
+  "verified": 0,
+  "precision": null,
+  "grounded_rate": 0.0,
+  "requirements": 8,
+  "requirements_covered": 0,
+  "coverage": 0.0,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "Technical \u2013 SQL & Experimentation",
+    "cite": "",
+    "verified": false
+   },
+   {
+    "question": "Technical \u2013 Defining & Tracking Activation",
+    "cite": "",
+    "verified": false
+   },
+   {
+    "question": "Behavioral \u2013 Discovery Interviews \u2192 Roadmap",
+    "cite": "",
+    "verified": false
+   },
+   {
+    "question": "Behavioral \u2013 Communicating Results & Trade\u2011offs",
+    "cite": "",
+    "verified": false
+   },
+   {
+    "question": "Situational \u2013 Activation Leak",
+    "cite": "",
+    "verified": false
+   },
+   {
+    "question": "Situational \u2013 End\u2011to\u2011End Ownership",
+    "cite": "",
+    "verified": false
+   }
+  ],
+  "posting": "04_product_manager",
+  "arm": "grounded",
+  "raw": "**1. Technical \u2013 SQL & Experimentation**  \n- **Question:** How have you used SQL and an experimentation framework to pull your own numbers and evaluate a product change?  \n- **Grounded in:** \u201cComfort with SQL and experimentation frameworks; you should be able to pull your own numbers\u201d  \n- **Strong answer includes:** A concrete example that names the database (e.g., Redshift, Postgres), writes a brief but realistic SQL query to extract activation\u2011related events, describes the experimentation framework (e.g., Optimizely, internal A/B platform), explains hypothesis, sample size calculation, statistical significance testing, and the impact on the activation metric.  \n- **Weak answer sounds like:** \u201cI\u2019ve written some SQL queries before and used A/B tests; they helped us understand the product.\u201d  \n\n**2. Technical \u2013 Defining & Tracking Activation**  \n- **Question:** What process would you follow to define and continuously track an activation metric for a B2B SaaS product?  \n- **Grounded in:** \u201cDefine and track the activation metric, and be accountable for moving it\u201d  \n- **Strong answer includes:** Identification of the user action that signals value (e.g., first successful workflow), data source mapping, instrumentation plan, dashboard creation (e.g., Looker/Chartio), setting targets, and a cadence for monitoring and iterating.  \n- **Weak answer sounds like:** \u201cI would pick a metric and watch it.\u201d  \n\n**3. Behavioral \u2013 Discovery Interviews \u2192 Roadmap**  \n- **Question:** Tell me about a time you ran discovery interviews with new users and translated what you heard into a prioritized roadmap.  \n- **Grounded in:** \u201cRun discovery interviews with new users and translate what you hear into a prioritized roadmap\u201d  \n- **Strong answer includes:** Interview guide creation, sampling strategy, synthesis method (e.g., affinity mapping), criteria used for prioritization (e.g., RICE, ICE), how the roadmap was communicated, and the resulting product changes.  \n- **Weak answer sounds like:** \u201cI talked to users and then made a list of things to do.\u201d  \n\n**4. Behavioral \u2013 Communicating Results & Trade\u2011offs**  \n- **Question:** Give an example of how you communicated experiment results and trade\u2011offs to the executive team.  \n- **Grounded in:** \u201cCommunicate results and tradeoffs to the executive team\u201d  \n- **Strong answer includes:** Use of a written memo (as the company prefers), clear presentation of metrics, confidence intervals, cost/benefit analysis, explicit trade\u2011off discussion, and the executive decision that followed.  \n- **Weak answer sounds like:** \u201cI sent them an email with the numbers.\u201d  \n\n**5. Situational \u2013 Activation Leak**  \n- **Question:** Activation is described as \u201cour biggest leak. Fewer than a third of signups reach the point where they see value.\u201d What are the first three actions you would take to start fixing this problem?  \n- **Grounded in:** \u201cActivation is our biggest leak. Fewer than a third of signups reach the point where they see value.\u201d  \n- **Strong answer includes:** Rapid data audit to verify the funnel, hypothesis generation (e.g., onboarding friction, missing education), designing quick\u2011turn experiments, and establishing a cross\u2011functional \u201cactivation squad\u201d to iterate weekly.  \n- **Weak answer sounds like:** \u201cI would look at the data and try to improve the onboarding flow.\u201d  \n\n**6. Situational \u2013 End\u2011to\u2011End Ownership**  \n- **Question:** What does \u201cown that problem end to end\u201d mean to you, and how would you structure your work across design, engineering, and leadership to achieve it?  \n- **Grounded in:** \u201cYou will own that problem end to end.\u201d  \n- **Strong answer includes:** Taking responsibility for problem definition, metric ownership, hypothesis backlog, sprint planning with design/engineering, weekly experiment cadence, continuous reporting, and closing the loop with post\u2011mortems and executive updates.  \n- **Weak answer sounds like:** \u201cI would manage the team that works on activation.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 5,
+  "precision": 0.8333333333333334,
+  "grounded_rate": 0.8333333333333334,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you previously defined and tracked an activation metric, and what impact did your ownership have on the product\u2019s overall health?",
+    "cite": "Define and track the activation metric, and be accountable for moving it",
+    "verified": true
+   },
+   {
+    "question": "Walk me through a recent discovery interview you conducted with a new user. How did you synthesize the insights into a prioritized roadmap?",
+    "cite": "Run discovery interviews with new users and translate what you hear into a prioritized roadmap",
+    "verified": true
+   },
+   {
+    "question": "Describe a time you shipped an experiment on a weekly cadence. What was the hypothesis, how did you design the test, and what did you learn?",
+    "cite": "Work with design and engineering to ship experiments weekly",
+    "verified": true
+   },
+   {
+    "question": "How do you communicate experiment results and trade\u2011offs to senior leadership, especially when the data is ambiguous or the outcome is negative?",
+    "cite": "Communicate results and tradeoffs to the executive team",
+    "verified": true
+   },
+   {
+    "question": "Tell us about a product you managed in a B2B SaaS environment that required you to write memos instead of slide decks. How did that format influence your thinking and stakeholder alignment?",
+    "cite": "We write memos, not slide decks\u201d and \u201c3+ years of product management experience in a B2B SaaS environment",
+    "verified": false
+   },
+   {
+    "question": "Give an example of a SQL query or experiment framework you built yourself to answer a product question. What was the question, and how did the data you pulled inform the next step?",
+    "cite": "Comfort with SQL and experimentation frameworks; you should be able to pull your own numbers",
+    "verified": true
+   }
+  ],
+  "posting": "04_product_manager",
+  "arm": "naive",
+  "raw": "**1. How have you previously defined and tracked an activation metric, and what impact did your ownership have on the product\u2019s overall health?**  \n- Grounded in: \u201cDefine and track the activation metric, and be accountable for moving it\u201d  \n- Strong answer includes: a clear description of the metric they chose (e.g., \u201cfirst\u2011value event within 7 days\u201d), the data sources and tools used, the process for setting baseline and targets, concrete results (percentage lift, churn reduction, revenue impact), and how they iterated based on findings.  \n- Weak answer sounds like: \u201cI just looked at sign\u2011ups vs. active users and tried to improve it.\u201d  \n\n**2. Walk me through a recent discovery interview you conducted with a new user. How did you synthesize the insights into a prioritized roadmap?**  \n- Grounded in: \u201cRun discovery interviews with new users and translate what you hear into a prioritized roadmap\u201d  \n- Strong answer includes: preparation steps (recruiting, interview guide), key findings (pain points, unmet needs), the framework used to synthesize (e.g., affinity mapping, impact\u2011effort matrix), how they weighted business value vs. effort, and the resulting roadmap items with justification.  \n- Weak answer sounds like: \u201cI asked users what they liked and then added the most popular feature.\u201d  \n\n**3. Describe a time you shipped an experiment on a weekly cadence. What was the hypothesis, how did you design the test, and what did you learn?**  \n- Grounded in: \u201cWork with design and engineering to ship experiments weekly\u201d  \n- Strong answer includes: a specific hypothesis, experiment design (A/B, multivariate), success metrics, collaboration details (design specs, engineering sprint planning), timeline, results (statistical significance, unexpected findings), and subsequent product decisions.  \n- Weak answer sounds like: \u201cWe ran a test and it either worked or didn\u2019t.\u201d  \n\n**4. How do you communicate experiment results and trade\u2011offs to senior leadership, especially when the data is ambiguous or the outcome is negative?**  \n- Grounded in: \u201cCommunicate results and tradeoffs to the executive team\u201d  \n- Strong answer includes: a structured communication approach (written memo with context, data, interpretation, recommendations), handling uncertainty (confidence intervals, risk assessment), framing negative results as learning, and tailoring the message to executive concerns (business impact, resource allocation).  \n- Weak answer sounds like: \u201cI just send a quick email with the numbers.\u201d  \n\n**5. Tell us about a product you managed in a B2B SaaS environment that required you to write memos instead of slide decks. How did that format influence your thinking and stakeholder alignment?**  \n- Grounded in: \u201cWe write memos, not slide decks\u201d and \u201c3+ years of product management experience in a B2B SaaS environment\u201d  \n- Strong answer includes: rationale for memo\u2011style communication (deep reasoning, traceability), an example memo outline, how it helped surface assumptions, drove clearer decisions, and feedback from stakeholders.  \n- Weak answer sounds like: \u201cI usually just make a PowerPoint and send it out.\u201d  \n\n**6. Give an example of a SQL query or experiment framework you built yourself to answer a product question. What was the question, and how did the data you pulled inform the next step?**  \n- Grounded in: \u201cComfort with SQL and experimentation frameworks; you should be able to pull your own numbers\u201d  \n- Strong answer includes: the business question, the specific SQL (or framework) they wrote (tables, joins, filters), validation steps, insights derived, and the concrete product action taken as a result.  \n- Weak answer sounds like: \u201cI ask the data team to get me the numbers.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 6,
+  "coverage": 0.75,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "Can you describe your process for maintaining and extending a Figma component library that is used across multiple engineering squads?",
+    "cite": "Maintain and extend our Figma component library, used by every squad",
+    "verified": true
+   },
+   {
+    "question": "How have you collaborated with engineering teams to ensure a product meets WCAG 2.1 AA compliance?",
+    "cite": "Partner with engineering on accessibility, including WCAG 2.1 AA compliance",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you designed a workflow for users who operate under time pressure and frequent interruptions. How did you address those conditions?",
+    "cite": "Design the scheduling workflow used by clinic staff, who are often working under time pressure with interruptions",
+    "verified": true
+   },
+   {
+    "question": "Walk me through how you have conducted usability sessions with clinical staff and turned the findings into actionable design improvements.",
+    "cite": "Run usability sessions with clinical staff and synthesize findings",
+    "verified": true
+   },
+   {
+    "question": "Imagine you are tasked with redesigning a scheduling interface where you must reduce the number of clicks by 30% while maintaining compliance with existing health data regulations. How would you approach this genuinely constrained problem?",
+    "cite": "Portfolio showing how you handled a genuinely constrained problem",
+    "verified": true
+   },
+   {
+    "question": "If you inherited a design system that is already in use across several squads but has inconsistent documentation, what steps would you take to scale it effectively while ensuring consistency?",
+    "cite": "Experience with design systems at scale",
+    "verified": true
+   }
+  ],
+  "posting": "05_ux_designer",
+  "arm": "grounded",
+  "raw": "**1. Can you describe your process for maintaining and extending a Figma component library that is used across multiple engineering squads?**  \n- Grounded in: \"Maintain and extend our Figma component library, used by every squad\"  \n- Strong answer includes: a clear workflow for auditing existing components, version control (e.g., using Figma branches or libraries), establishing naming conventions, gathering squad feedback, prioritizing updates, documenting changes, and measuring adoption.  \n- Weak answer sounds like: \u201cI just add new components when I think they\u2019re needed.\u201d\n\n**2. How have you collaborated with engineering teams to ensure a product meets WCAG 2.1 AA compliance?**  \n- Grounded in: \"Partner with engineering on accessibility, including WCAG 2.1 AA compliance\"  \n- Strong answer includes: specific joint activities (e.g., accessibility audits, shared issue trackers, regular design\u2011dev hand\u2011offs with accessibility checklists), tools used (axe, Lighthouse), remediation examples, and verification steps before release.  \n- Weak answer sounds like: \u201cI make sure the colors have enough contrast and that\u2019s it.\u201d\n\n**3. Tell me about a time you designed a workflow for users who operate under time pressure and frequent interruptions. How did you address those conditions?**  \n- Grounded in: \"Design the scheduling workflow used by clinic staff, who are often working under time pressure with interruptions\"  \n- Strong answer includes: user research findings on interruption patterns, design decisions that reduce cognitive load (e.g., progressive disclosure, auto\u2011save, clear visual hierarchy), validation through testing, and measurable outcomes (speed, error reduction).  \n- Weak answer sounds like: \u201cI just made the screens look clean.\u201d\n\n**4. Walk me through how you have conducted usability sessions with clinical staff and turned the findings into actionable design improvements.**  \n- Grounded in: \"Run usability sessions with clinical staff and synthesize findings\"  \n- Strong answer includes: recruitment strategy for clinicians, session structure (tasks, think\u2011aloud), data capture methods, synthesis techniques (affinity mapping, severity rating), how insights were prioritized, and concrete changes made.  \n- Weak answer sounds like: \u201cI asked them what they liked and made a list.\u201d\n\n**5. Imagine you are tasked with redesigning a scheduling interface where you must reduce the number of clicks by 30% while maintaining compliance with existing health data regulations. How would you approach this genuinely constrained problem?**  \n- Grounded in: \"Portfolio showing how you handled a genuinely constrained problem\"  \n- Strong answer includes: defining the constraint matrix (click count, regulatory limits), hypothesis generation, rapid prototyping, quantitative testing (click\u2011stream analysis), stakeholder alignment on compliance, and iteration based on results.  \n- Weak answer sounds like: \u201cI would just make the buttons bigger.\u201d\n\n**6. If you inherited a design system that is already in use across several squads but has inconsistent documentation, what steps would you take to scale it effectively while ensuring consistency?**  \n- Grounded in: \"Experience with design systems at scale\"  \n- Strong answer includes: audit of existing components, establishing a single source of truth (e.g., a Figma library with versioning), creating clear documentation standards, setting up governance (design ops, review board), onboarding processes for squads, and metrics to track consistency adoption.  \n- Weak answer sounds like: \u201cI would ask each squad to follow the same rules.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 6,
+  "coverage": 0.75,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you previously maintained and expanded a shared component library in Figma, and what processes did you put in place to ensure consistency across multiple product teams?",
+    "cite": "Maintain and extend our Figma component library, used by every squad",
+    "verified": true
+   },
+   {
+    "question": "Tell us about a time you designed a high\u2011pressure workflow (e.g., scheduling, triage, dispatch) for users who are frequently interrupted. What constraints did you consider and how did you validate the solution?",
+    "cite": "Design the scheduling workflow used by clinic staff, who are often working under time pressure with interruptions",
+    "verified": true
+   },
+   {
+    "question": "Describe your approach to running usability sessions with clinical staff (or other domain experts). How do you recruit participants, structure the session, and turn observations into actionable design improvements?",
+    "cite": "Run usability sessions with clinical staff and synthesize findings",
+    "verified": true
+   },
+   {
+    "question": "What experience do you have ensuring digital products meet WCAG 2.1 AA standards, and how have you partnered with engineering to achieve accessibility compliance?",
+    "cite": "Partner with engineering on accessibility, including WCAG 2.1 AA compliance",
+    "verified": true
+   },
+   {
+    "question": "Your portfolio must demonstrate how you tackled a genuinely constrained problem. Walk us through one project that illustrates this, focusing on the constraints and your design decision\u2011making process.",
+    "cite": "Portfolio showing how you handled a genuinely constrained problem",
+    "verified": true
+   },
+   {
+    "question": "Although not required, familiarity with healthcare settings is a plus. If you have any exposure to clinical environments, how did that experience shape your design approach? If not, how would you quickly get up to speed?",
+    "cite": "Familiarity with healthcare settings is preferred but not required",
+    "verified": true
+   }
+  ],
+  "posting": "05_ux_designer",
+  "arm": "naive",
+  "raw": "**1. How have you previously maintained and expanded a shared component library in Figma, and what processes did you put in place to ensure consistency across multiple product teams?**  \n- Grounded in: \u201cMaintain and extend our Figma component library, used by every squad\u201d  \n- Strong answer includes: a concrete example of a component library they owned, description of version\u2011control or naming conventions, a review or QA workflow (e.g., design\u2011ops syncs, documentation, automated testing), metrics showing reduced design debt or faster hand\u2011offs, and how they collaborated with designers and engineers to keep the library up\u2011to\u2011date.  \n- Weak answer sounds like: \u201cI\u2019ve used Figma before and I make components when I need them. I just tell the team to use them.\u201d  \n\n---\n\n**2. Tell us about a time you designed a high\u2011pressure workflow (e.g., scheduling, triage, dispatch) for users who are frequently interrupted. What constraints did you consider and how did you validate the solution?**  \n- Grounded in: \u201cDesign the scheduling workflow used by clinic staff, who are often working under time pressure with interruptions\u201d  \n- Strong answer includes: a specific project with a similarly stressful user context, identification of constraints (time, cognitive load, error tolerance), design tactics (progressive disclosure, shortcuts, visual hierarchy), usability testing or field observations with real users, and measurable outcomes such as reduced task time or error rate.  \n- Weak answer sounds like: \u201cI would make the screens look nice and add big buttons. I think that would help.\u201d  \n\n---\n\n**3. Describe your approach to running usability sessions with clinical staff (or other domain experts). How do you recruit participants, structure the session, and turn observations into actionable design improvements?**  \n- Grounded in: \u201cRun usability sessions with clinical staff and synthesize findings\u201d  \n- Strong answer includes: recruitment strategy (e.g., partnering with a clinic, incentives, diversity of roles), session planning (scenario\u2011based tasks, think\u2011aloud protocol, timing), note\u2011taking and recording methods, synthesis techniques (affinity mapping, severity rating), and concrete examples of how findings led to design changes.  \n- Weak answer sounds like: \u201cI would just ask a few people what they think and then change the design if they don\u2019t like it.\u201d  \n\n---\n\n**4. What experience do you have ensuring digital products meet WCAG\u202f2.1\u202fAA standards, and how have you partnered with engineering to achieve accessibility compliance?**  \n- Grounded in: \u201cPartner with engineering on accessibility, including WCAG 2.1 AA compliance\u201d  \n- Strong answer includes: familiarity with WCAG criteria (contrast, keyboard navigation, ARIA), specific accessibility audits or remediation work they led, collaboration models (design\u2011engineer accessibility reviews, shared checklists, automated testing tools), and evidence of a product that passed AA compliance or improved accessibility metrics.  \n- Weak answer sounds like: \u201cI know accessibility is important, so I just make sure the colors look good.\u201d  \n\n---\n\n**5. Your portfolio must demonstrate how you tackled a genuinely constrained problem. Walk us through one project that illustrates this, focusing on the constraints and your design decision\u2011making process.**  \n- Grounded in: \u201cPortfolio showing how you handled a genuinely constrained problem\u201d  \n- Strong answer includes: clear articulation of constraints (technical, regulatory, time, data, user environment), the problem statement, ideation and iteration, trade\u2011off analysis, final solution, and impact metrics or user feedback that show the constraint was successfully navigated.  \n- Weak answer sounds like: \u201cMy portfolio has a lot of nice screens; I just chose the best\u2011looking ones.\u201d  \n\n---\n\n**6. Although not required, familiarity with healthcare settings is a plus. If you have any exposure to clinical environments, how did that experience shape your design approach? If not, how would you quickly get up to speed?**  \n- Grounded in: \u201cFamiliarity with healthcare settings is preferred but not required\u201d  \n- Strong answer includes: (a) concrete examples of working in or with healthcare teams, understanding of clinical workflows, regulatory considerations (HIPAA, patient safety), and how those insights influenced design; or (b) a systematic plan for rapid immersion\u2014interviews with clinicians, shadowing, reviewing industry guidelines, and incorporating domain expertise early in the design process.  \n- Weak answer sounds like: \u201cI don\u2019t know much about healthcare, but I\u2019m a fast learner.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 9,
+  "requirements_covered": 5,
+  "coverage": 0.5555555555555556,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you previously \u201cowned a Kubernetes platform, including cluster upgrades and capacity planning,\u201d and what processes did you put in place to ensure upgrades never disrupted production workloads?",
+    "cite": "Own our Kubernetes platform, including cluster upgrades and capacity planning",
+    "verified": true
+   },
+   {
+    "question": "Describe a Terraform module you built that was consumed by multiple product teams. How did you ensure the module was reusable, version\u2011controlled, and safe to apply in production?",
+    "cite": "Build and maintain Terraform modules that product teams consume",
+    "verified": true
+   },
+   {
+    "question": "When you \u201clead incident response and write blameless postmortems,\u201d what steps do you take during the incident and how do you structure the postmortem to drive continuous improvement?",
+    "cite": "Lead incident response and write blameless postmortems",
+    "verified": true
+   },
+   {
+    "question": "The posting notes a need to \u201creduce mean time to recovery, which is currently over 40 minutes.\u201d What concrete tactics have you used in the past to bring MTTR down, and how would you measure success in this role?",
+    "cite": "Reduce mean time to recovery, which is currently over 40 minutes",
+    "verified": true
+   },
+   {
+    "question": "Our observability stack consists of \u201cPrometheus, Grafana, OpenTelemetry.\u201d If you were tasked with improving this stack, what enhancements would you prioritize and why?",
+    "cite": "Improve our observability stack (Prometheus, Grafana, OpenTelemetry)",
+    "verified": true
+   },
+   {
+    "question": "The platform \u201cruns on Kubernetes across three regions.\u201d How would you address the challenges of multi\u2011region deployments, such as latency, data residency, and coordinated rollouts?",
+    "cite": "Our platform runs on Kubernetes across three regions.",
+    "verified": true
+   }
+  ],
+  "posting": "06_devops_sre",
+  "arm": "grounded",
+  "raw": "**1. How have you previously \u201cowned a Kubernetes platform, including cluster upgrades and capacity planning,\u201d and what processes did you put in place to ensure upgrades never disrupted production workloads?**  \n- Grounded in: \u201cOwn our Kubernetes platform, including cluster upgrades and capacity planning\u201d  \n- Strong answer includes: specific examples of managing multi\u2011cluster upgrades (e.g., canary or blue\u2011green strategies), capacity forecasting methods (historical metrics, load testing), automation tooling (e.g., Argo CD, kube\u2011adm, custom scripts), risk mitigation steps, and measurable outcomes such as zero\u2011downtime upgrades.  \n- Weak answer sounds like: \u201cI have managed Kubernetes clusters and performed upgrades when needed.\u201d  \n\n**2. Describe a Terraform module you built that was consumed by multiple product teams. How did you ensure the module was reusable, version\u2011controlled, and safe to apply in production?**  \n- Grounded in: \u201cBuild and maintain Terraform modules that product teams consume\u201d  \n- Strong answer includes: module design (inputs, outputs, validation), use of Terraform Registry or private repo, semantic versioning, CI/CD pipeline for testing (e.g., terratest, plan\u2011check), documentation, and a real\u2011world impact (e.g., reduced provisioning time, fewer drift incidents).  \n- Weak answer sounds like: \u201cI have written Terraform modules before and they worked.\u201d  \n\n**3. When you \u201clead incident response and write blameless postmortems,\u201d what steps do you take during the incident and how do you structure the postmortem to drive continuous improvement?**  \n- Grounded in: \u201cLead incident response and write blameless postmortems\u201d  \n- Strong answer includes: establishing an incident commander, real\u2011time communication channels, timeline reconstruction, root\u2011cause analysis techniques (5\u2011Whys, fishbone), documenting findings without blame, actionable remediation tickets, and follow\u2011up reviews.  \n- Weak answer sounds like: \u201cI join the incident call and later write a report.\u201d  \n\n**4. The posting notes a need to \u201creduce mean time to recovery, which is currently over 40 minutes.\u201d What concrete tactics have you used in the past to bring MTTR down, and how would you measure success in this role?**  \n- Grounded in: \u201cReduce mean time to recovery, which is currently over 40 minutes\u201d  \n- Strong answer includes: implementing automated health checks, runbooks, on\u2011call rotation improvements, alert fatigue reduction, self\u2011healing mechanisms, and using metrics (MTTR trend charts) to demonstrate reduction (e.g., from 45\u202fmin to <15\u202fmin).  \n- Weak answer sounds like: \u201cI would try to fix things faster.\u201d  \n\n**5. Our observability stack consists of \u201cPrometheus, Grafana, OpenTelemetry.\u201d If you were tasked with improving this stack, what enhancements would you prioritize and why?**  \n- Grounded in: \u201cImprove our observability stack (Prometheus, Grafana, OpenTelemetry)\u201d  \n- Strong answer includes: adding distributed tracing with OpenTelemetry SDKs, creating service\u2011level dashboards in Grafana, alerting rule refinement in Prometheus, scaling Prometheus with Thanos or Cortex, and establishing SLO/SLI monitoring.  \n- Weak answer sounds like: \u201cI would add more dashboards and alerts.\u201d  \n\n**6. The platform \u201cruns on Kubernetes across three regions.\u201d How would you address the challenges of multi\u2011region deployments, such as latency, data residency, and coordinated rollouts?**  \n- Grounded in: \u201cOur platform runs on Kubernetes across three regions.\u201d  \n- Strong answer includes: using regional clusters with federation or multi\u2011cluster service mesh (e.g., Istio, Linkerd), latency\u2011aware routing, data\u2011replication strategies, region\u2011specific capacity planning, and rollout coordination tools (Argo Rollouts, Helm).  \n- Weak answer sounds like: \u201cI would make sure the clusters are up and running in each region.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 9,
+  "requirements_covered": 6,
+  "coverage": 0.6666666666666666,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you managed Kubernetes cluster upgrades and capacity planning in a multi\u2011region production environment?",
+    "cite": "Own our Kubernetes platform, including cluster upgrades and capacity planning",
+    "verified": true
+   },
+   {
+    "question": "What strategies would you apply to bring the mean time to recovery (MTTR) down from the current 40 + minutes?",
+    "cite": "Reduce mean time to recovery, which is currently over 40 minutes",
+    "verified": true
+   },
+   {
+    "question": "Can you walk us through a Terraform module you built that was consumed by multiple product teams? What challenges did you face and how did you address them?",
+    "cite": "Build and maintain Terraform modules that product teams consume",
+    "verified": true
+   },
+   {
+    "question": "How have you improved an observability stack that includes Prometheus, Grafana, and OpenTelemetry? Provide specific metrics or dashboards you introduced.",
+    "cite": "Improve our observability stack (Prometheus, Grafana, OpenTelemetry)",
+    "verified": true
+   },
+   {
+    "question": "Describe a time you led an incident response and wrote a blameless post\u2011mortem. What key elements did you include to ensure learning and accountability?",
+    "cite": "Lead incident response and write blameless postmortems",
+    "verified": true
+   },
+   {
+    "question": "Which language\u2014Go or Python\u2014are you most comfortable with for building SRE tooling, and can you give an example of a tool or automation you created with it?",
+    "cite": "Strong skills in at least one of Go or Python",
+    "verified": true
+   }
+  ],
+  "posting": "06_devops_sre",
+  "arm": "naive",
+  "raw": "**1. How have you managed Kubernetes cluster upgrades and capacity planning in a multi\u2011region production environment?**  \n- Grounded in: \u201cOwn our Kubernetes platform, including cluster upgrades and capacity planning\u201d  \n- Strong answer includes: a concrete example of planning and executing a rolling upgrade across multiple regions, tools used (e.g., kube\u2011adm, GitOps, ArgoCD), metrics tracked for capacity (CPU, memory, pod density), risk mitigation steps, and post\u2011upgrade validation. The candidate should also discuss how they forecasted growth, set alerts, and collaborated with product teams to avoid resource contention.  \n- Weak answer sounds like: \u201cI\u2019ve upgraded clusters before and I keep an eye on capacity; it\u2019s just a matter of running `kubectl` and adding nodes when needed.\u201d  \n\n---\n\n**2. What strategies would you apply to bring the mean time to recovery (MTTR) down from the current 40\u202f+\u202fminutes?**  \n- Grounded in: \u201cReduce mean time to recovery, which is currently over 40 minutes\u201d  \n- Strong answer includes: identification of root causes (lack of observability, manual runbooks, siloed knowledge), concrete tactics such as improving alerting thresholds, automating remediation with scripts or operators, building clear runbooks, conducting regular fire\u2011drill rehearsals, and measuring progress with dashboards. The answer should reference past results (e.g., \u201ccut MTTR by 60\u202f% in X months\u201d).  \n- Weak answer sounds like: \u201cWe\u2019ll just respond faster and hope the incidents are smaller.\u201d  \n\n---\n\n**3. Can you walk us through a Terraform module you built that was consumed by multiple product teams? What challenges did you face and how did you address them?**  \n- Grounded in: \u201cBuild and maintain Terraform modules that product teams consume\u201d  \n- Strong answer includes: description of a reusable, version\u2011controlled module (e.g., VPC, EKS node pool), how they handled inputs/outputs, enforced standards with linting/CI, managed module versioning, dealt with state management (remote backend, locking), and gathered feedback from downstream teams to iterate. Mention of documentation and onboarding processes is a plus.  \n- Weak answer sounds like: \u201cI\u2019ve written a few Terraform scripts; they work fine for the team I\u2019m on.\u201d  \n\n---\n\n**4. How have you improved an observability stack that includes Prometheus, Grafana, and OpenTelemetry? Provide specific metrics or dashboards you introduced.**  \n- Grounded in: \u201cImprove our observability stack (Prometheus, Grafana, OpenTelemetry)\u201d  \n- Strong answer includes: concrete steps such as instrumenting services with OpenTelemetry SDKs, creating service\u2011level objectives (SLOs) and alerts in Prometheus, designing Grafana dashboards for latency, error rates, and resource usage, and establishing alert routing (e.g., Alertmanager). The candidate should cite measurable impact (e.g., \u201creduced false\u2011positive alerts by 30\u202f%\u201d).  \n- Weak answer sounds like: \u201cI know how to set up Grafana and Prometheus, so I\u2019d just add more graphs.\u201d  \n\n---\n\n**5. Describe a time you led an incident response and wrote a blameless post\u2011mortem. What key elements did you include to ensure learning and accountability?**  \n- Grounded in: \u201cLead incident response and write blameless postmortems\u201d  \n- Strong answer includes: role in coordinating responders, communication channels used, timeline reconstruction, root\u2011cause analysis methodology (e.g., 5 Whys, fishbone), actionable remediation items, follow\u2011up verification, and how the post\u2011mortem was shared without assigning blame. The candidate should also mention cultural impact (e.g., increased reporting, process changes).  \n- Weak answer sounds like: \u201cI was on call, I fixed the issue, and I wrote a short summary.\u201d  \n\n---\n\n**6. Which language\u2014Go or Python\u2014are you most comfortable with for building SRE tooling, and can you give an example of a tool or automation you created with it?**  \n- Grounded in: \u201cStrong skills in at least one of Go or Python\u201d  \n- Strong answer includes: selection of language with rationale (performance, ecosystem), description of a production\u2011grade tool (e.g., a custom Kubernetes controller in Go, a log\u2011parsing automation in Python), discussion of testing, CI/CD, and how the tool solved a real reliability problem (e.g., automated node health checks). Mention of open\u2011source contributions or internal adoption adds depth.  \n- Weak answer sounds like: \u201cI know both languages, I could write something if needed.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you built and maintained batch pipelines in Airflow that feed an analytics warehouse?",
+    "cite": "Build and maintain batch pipelines in Airflow that feed our analytics warehouse",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a project where you modeled data using dbt and maintained documentation for analyst consumers?",
+    "cite": "Model data using dbt and maintain documentation for analyst consumers",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you worked directly with analysts to understand how data will actually be used.",
+    "cite": "Ability to work with analysts to understand how data will actually be used",
+    "verified": true
+   },
+   {
+    "question": "How have you ensured that documentation stays accurate and useful for analyst consumers over time?",
+    "cite": "maintain documentation for analyst consumers",
+    "verified": true
+   },
+   {
+    "question": "Describe the steps you would take to migrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards.",
+    "cite": "Migrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards",
+    "verified": true
+   },
+   {
+    "question": "What methods have you used to implement data quality checks and alerting so that silent failures stop reaching business users?",
+    "cite": "Implement data quality checks and alerting so that silent failures stop reaching business users",
+    "verified": true
+   }
+  ],
+  "posting": "07_data_engineer",
+  "arm": "grounded",
+  "raw": "**1. How have you built and maintained batch pipelines in Airflow that feed an analytics warehouse?**  \n- Grounded in: \"Build and maintain batch pipelines in Airflow that feed our analytics warehouse\"  \n- Strong answer includes: specific Airflow DAG design (operators, scheduling, retries), handling of data extraction, transformation, loading steps, monitoring and logging practices, scaling considerations, and examples of how the pipelines reliably delivered data to the warehouse.  \n- Weak answer sounds like: \u201cI\u2019ve used Airflow before to run some ETL jobs.\u201d  \n\n**2. Can you describe a project where you modeled data using dbt and maintained documentation for analyst consumers?**  \n- Grounded in: \"Model data using dbt and maintain documentation for analyst consumers\"  \n- Strong answer includes: dbt model hierarchy (staging, intermediate, marts), use of tests, macros, version control, and how the auto\u2011generated docs (e.g., dbt docs, lineage graph) were kept up\u2011to\u2011date for analysts, with concrete impact on analyst self\u2011service.  \n- Weak answer sounds like: \u201cI know dbt does transformations and you can write docs.\u201d  \n\n**3. Tell me about a time you worked directly with analysts to understand how data will actually be used.**  \n- Grounded in: \"Ability to work with analysts to understand how data will actually be used\"  \n- Strong answer includes: collaborative discovery sessions, translating business questions into technical requirements, iterative feedback loops, and how that insight shaped schema design or pipeline logic.  \n- Weak answer sounds like: \u201cI usually just give analysts the data they ask for.\u201d  \n\n**4. How have you ensured that documentation stays accurate and useful for analyst consumers over time?**  \n- Grounded in: \"maintain documentation for analyst consumers\"  \n- Strong answer includes: processes for documentation ownership, sync with code changes (e.g., CI checks, dbt docs generation), user feedback mechanisms, and measurable improvements in analyst onboarding or query success rates.  \n- Weak answer sounds like: \u201cI write a readme and hope it\u2019s still correct.\u201d  \n\n**5. Describe the steps you would take to migrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards.**  \n- Grounded in: \"Migrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards\"  \n- Strong answer includes: assessment of existing queries, compatibility testing, parallel run strategy, schema translation, data validation, versioned releases, and communication plan with dashboard owners to verify visualizations post\u2011migration.  \n- Weak answer sounds like: \u201cI would just point the pipeline at Snowflake and hope it works.\u201d  \n\n**6. What methods have you used to implement data quality checks and alerting so that silent failures stop reaching business users?**  \n- Grounded in: \"Implement data quality checks and alerting so that silent failures stop reaching business users\"  \n- Strong answer includes: specific quality tests (row counts, null checks, referential integrity), tooling (e.g., Great Expectations, dbt tests, Airflow sensors), alert routing (Slack, PagerDuty), escalation procedures, and examples where the system caught a failure before it impacted users.  \n- Weak answer sounds like: \u201cI add some checks and send an email if something goes wrong.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 6,
+  "coverage": 0.75,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How do you design, build, and maintain batch pipelines in Airflow to reliably feed an analytics warehouse?",
+    "cite": "Build and maintain batch pipelines in Airflow that feed our analytics warehouse",
+    "verified": true
+   },
+   {
+    "question": "Describe a migration you\u2019ve performed from Redshift to Snowflake, focusing on how you avoided breaking downstream dashboards.",
+    "cite": "Migrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards",
+    "verified": true
+   },
+   {
+    "question": "What data quality checks and alerting mechanisms have you implemented to prevent silent failures from reaching business users?",
+    "cite": "Implement data quality checks and alerting so that silent failures stop reaching business users",
+    "verified": true
+   },
+   {
+    "question": "How do you use dbt to model data and keep documentation up\u2011to\u2011date for analyst consumers?",
+    "cite": "Model data using dbt and maintain documentation for analyst consumers",
+    "verified": true
+   },
+   {
+    "question": "Can you give an example of a complex SQL problem you solved in a production analytics environment, and how you ensured it performed well at scale?",
+    "cite": "3+ years of experience with SQL in a production analytics environment",
+    "verified": true
+   },
+   {
+    "question": "How do you collaborate with analysts to understand how the data you build will actually be used?",
+    "cite": "Ability to work with analysts to understand how data will actually be used",
+    "verified": true
+   }
+  ],
+  "posting": "07_data_engineer",
+  "arm": "naive",
+  "raw": "**1. How do you design, build, and maintain batch pipelines in Airflow to reliably feed an analytics warehouse?**  \n- Grounded in: \u201cBuild and maintain batch pipelines in Airflow that feed our analytics warehouse\u201d  \n- Strong answer includes: a step\u2011by\u2011step description of pipeline architecture (e.g., DAG design, task modularity, retries, SLA monitoring), use of Airflow best practices (connections, variables, pools), version control (Git), testing strategy (unit & integration tests), and concrete metrics such as reduced latency or increased success rate after implementation.  \n- Weak answer sounds like: \u201cI just create DAGs in Airflow and make sure they run.\u201d  \n\n**2. Describe a migration you\u2019ve performed from Redshift to Snowflake, focusing on how you avoided breaking downstream dashboards.**  \n- Grounded in: \u201cMigrate legacy pipelines from Redshift to Snowflake without breaking downstream dashboards\u201d  \n- Strong answer includes: a clear migration plan (inventory, schema translation, data validation, shadow tables), handling of breaking changes (e.g., view compatibility, column naming), coordination with downstream owners, use of automated testing or CI pipelines, and a measurable outcome (e.g., zero dashboard downtime, performance improvement).  \n- Weak answer sounds like: \u201cI moved the data and it worked.\u201d  \n\n**3. What data quality checks and alerting mechanisms have you implemented to prevent silent failures from reaching business users?**  \n- Grounded in: \u201cImplement data quality checks and alerting so that silent failures stop reaching business users\u201d  \n- Strong answer includes: specific types of checks (row counts, null checks, referential integrity, statistical anomalies), tools used (Great Expectations, dbt tests, custom Airflow sensors), alerting channels (Slack, PagerDuty, email), escalation procedures, and an example where a check caught an issue before it impacted reporting.  \n- Weak answer sounds like: \u201cI add some checks and send an email if something fails.\u201d  \n\n**4. How do you use dbt to model data and keep documentation up\u2011to\u2011date for analyst consumers?**  \n- Grounded in: \u201cModel data using dbt and maintain documentation for analyst consumers\u201d  \n- Strong answer includes: dbt project structure (sources, staging, marts), use of ref() for lineage, writing tests (schema & data), generating docs with `dbt docs generate`, publishing docs (e.g., via dbt Cloud, hosted site), and a process for keeping docs current (CI checks, analyst feedback loop).  \n- Weak answer sounds like: \u201cI write dbt models and add a README.\u201d  \n\n**5. Can you give an example of a complex SQL problem you solved in a production analytics environment, and how you ensured it performed well at scale?**  \n- Grounded in: \u201c3+ years of experience with SQL in a production analytics environment\u201d  \n- Strong answer includes: description of the business problem, the SQL query (or key constructs like window functions, CTEs, materialized views), performance tuning steps (indexes, partitioning, query refactoring, EXPLAIN analysis), testing for correctness, and the impact (e.g., query time reduced from 15\u202fmin to 45\u202fsec).  \n- Weak answer sounds like: \u201cI write SQL queries all the time.\u201d  \n\n**6. How do you collaborate with analysts to understand how the data you build will actually be used?**  \n- Grounded in: \u201cAbility to work with analysts to understand how data will actually be used\u201d  \n- Strong answer includes: regular discovery meetings, translating business questions into data requirements, creating prototypes or data dictionaries, incorporating analyst feedback into schema design, and an example of a change made after analyst input that improved usability or reduced confusion.  \n- Weak answer sounds like: \u201cI just give the analysts the tables they ask for.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "Can you walk me through a recent project where you used SQL and spreadsheet modeling to analyze marketing data?",
+    "cite": "Proficiency with SQL and spreadsheet modeling",
+    "verified": true
+   },
+   {
+    "question": "How have you dealt with the limits of last\u2011click attribution when evaluating campaign performance?",
+    "cite": "Understanding of the limits of last-click attribution",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you built attribution reporting across paid search, paid social and email. What steps did you take and what challenges did you encounter?",
+    "cite": "Build attribution reporting across paid search, paid social and email",
+    "verified": true
+   },
+   {
+    "question": "Describe how you partnered with finance on budget forecasting. What was your role and how did you ensure alignment between marketing and finance goals?",
+    "cite": "Partner with finance on budget forecasting",
+    "verified": true
+   },
+   {
+    "question": "Give an example of when you had to measure whether marketing spend worked and honestly report that it did not. How did you present the findings and what was the outcome?",
+    "cite": "measure whether our marketing spend works, and tell us honestly when it does not.",
+    "verified": true
+   },
+   {
+    "question": "Walk me through how you would design and analyze an incrementality test that includes geo holdouts. What factors would you consider to ensure the test is valid?",
+    "cite": "Run and analyze incrementality tests, including geo holdouts",
+    "verified": true
+   }
+  ],
+  "posting": "08_marketing_analyst",
+  "arm": "grounded",
+  "raw": "**1. Can you walk me through a recent project where you used SQL and spreadsheet modeling to analyze marketing data?**  \n- Grounded in: \"Proficiency with SQL and spreadsheet modeling\"  \n- Strong answer includes: specific example of a complex query or data pipeline written in SQL, how the data was imported into a spreadsheet, the modeling techniques applied (e.g., pivot tables, regression formulas), the insights uncovered, and the business impact.  \n- Weak answer sounds like: vague statement like \u201cI\u2019ve used SQL and Excel before\u201d without details of scale, methodology, or results.  \n\n**2. How have you dealt with the limits of last\u2011click attribution when evaluating campaign performance?**  \n- Grounded in: \"Understanding of the limits of last-click attribution\"  \n- Strong answer includes: explanation of why last\u2011click can be misleading, alternative attribution models or supplemental analyses the candidate employed (e.g., multi\u2011touch, data\u2011driven), and a concrete example showing how this changed decision\u2011making.  \n- Weak answer sounds like: \u201cI know last\u2011click isn\u2019t perfect, but I just use it.\u201d  \n\n**3. Tell me about a time you built attribution reporting across paid search, paid social and email. What steps did you take and what challenges did you encounter?**  \n- Grounded in: \"Build attribution reporting across paid search, paid social and email\"  \n- Strong answer includes: data sources identified, integration process, metric definitions, handling of mismatched granularity, validation steps, and how the final report was used by stakeholders.  \n- Weak answer sounds like: generic description of \u201cI made a report\u201d without specifics on channels or methodology.  \n\n**4. Describe how you partnered with finance on budget forecasting. What was your role and how did you ensure alignment between marketing and finance goals?**  \n- Grounded in: \"Partner with finance on budget forecasting\"  \n- Strong answer includes: regular meetings or processes established, data shared (e.g., spend, ROI forecasts), how discrepancies were resolved, and an outcome such as a more accurate forecast or approved budget adjustment.  \n- Weak answer sounds like: \u201cI talked to finance a little\u201d with no detail on collaboration or results.  \n\n**5. Give an example of when you had to measure whether marketing spend worked and honestly report that it did not. How did you present the findings and what was the outcome?**  \n- Grounded in: \"measure whether our marketing spend works, and tell us honestly when it does not.\"  \n- Strong answer includes: the metric(s) used to assess spend effectiveness, the analytical approach, the communication method (e.g., deck, meeting), handling of stakeholder reaction, and any subsequent actions taken (budget reallocation, strategy change).  \n- Weak answer sounds like: \u201cI once said a campaign failed\u201d without explaining analysis or impact.  \n\n**6. Walk me through how you would design and analyze an incrementality test that includes geo holdouts. What factors would you consider to ensure the test is valid?**  \n- Grounded in: \"Run and analyze incrementality tests, including geo holdouts\"  \n- Strong answer includes: selection of test and control geographies, randomization, sample size calculation, measurement windows, handling of external variables, statistical methods for significance, and interpretation of lift versus baseline.  \n- Weak answer sounds like: \u201cI\u2019d just compare two regions\u201d without discussing rigor or statistical considerations.  "
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 4,
+  "precision": 0.6666666666666666,
+  "grounded_rate": 0.6666666666666666,
+  "requirements": 8,
+  "requirements_covered": 3,
+  "coverage": 0.375,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How do you approach building attribution models that go beyond last\u2011click, and what trade\u2011offs do you consider?",
+    "cite": "Understanding of the limits of last\u2011click attribution",
+    "verified": false
+   },
+   {
+    "question": "Walk me through a recent incrementality test you designed, including how you selected the geo holdout and measured lift.",
+    "cite": "Run and analyze incrementality tests, including geo holdouts",
+    "verified": true
+   },
+   {
+    "question": "What key metrics do you include in a weekly marketing performance review deck, and how do you tailor the presentation for non\u2011technical stakeholders?",
+    "cite": "Maintain the weekly marketing performance review deck\u201d & \u201cAbility to communicate findings clearly to a non\u2011technical audience",
+    "verified": false
+   },
+   {
+    "question": "Describe a situation where your analysis showed that a marketing channel was under\u2011performing. How did you present the findings and what actions resulted?",
+    "cite": "You will measure whether our marketing spend works, and tell us honestly when it does not.",
+    "verified": true
+   },
+   {
+    "question": "How comfortable are you writing complex SQL queries for marketing data, and can you give an example of a particularly challenging query you\u2019ve built?",
+    "cite": "Proficiency with SQL and spreadsheet modeling",
+    "verified": true
+   },
+   {
+    "question": "Explain how you would collaborate with the finance team to create a reliable marketing budget forecast. What inputs and assumptions would you bring to the table?",
+    "cite": "Partner with finance on budget forecasting",
+    "verified": true
+   }
+  ],
+  "posting": "08_marketing_analyst",
+  "arm": "naive",
+  "raw": "**1. How do you approach building attribution models that go beyond last\u2011click, and what trade\u2011offs do you consider?**  \n- Grounded in: \u201cUnderstanding of the limits of last\u2011click attribution\u201d  \n- Strong answer includes: a clear explanation of multi\u2011touch or data\u2011driven attribution methods, discussion of data availability and privacy constraints, examples of how they\u2019ve weighted different touchpoints, and acknowledgement of the trade\u2011off between model complexity and interpretability.  \n- Weak answer sounds like: \u201cI just use last\u2011click because it\u2019s simple,\u201d or \u201cI\u2019d just follow what the tool tells me without thinking about it.\u201d\n\n**2. Walk me through a recent incrementality test you designed, including how you selected the geo holdout and measured lift.**  \n- Grounded in: \u201cRun and analyze incrementality tests, including geo holdouts\u201d  \n- Strong answer includes: description of hypothesis, selection criteria for test and control geos (e.g., similarity, size, seasonality), experimental design (randomization, duration), metrics tracked, statistical methods used to calculate lift, and how results informed budget or strategy.  \n- Weak answer sounds like: \u201cI ran an A/B test on a few cities and saw a bump,\u201d without details on methodology, control selection, or statistical rigor.\n\n**3. What key metrics do you include in a weekly marketing performance review deck, and how do you tailor the presentation for non\u2011technical stakeholders?**  \n- Grounded in: \u201cMaintain the weekly marketing performance review deck\u201d & \u201cAbility to communicate findings clearly to a non\u2011technical audience\u201d  \n- Strong answer includes: a concise set of leading and lagging indicators (e.g., ROAS, CPA, conversion rate, incremental lift), visual storytelling techniques (charts, annotations), contextual narrative that links numbers to business outcomes, and examples of simplifying technical jargon.  \n- Weak answer sounds like: \u201cI just dump all the raw numbers into a spreadsheet and send it out,\u201d or \u201cI show the same charts every week without explanation.\u201d\n\n**4. Describe a situation where your analysis showed that a marketing channel was under\u2011performing. How did you present the findings and what actions resulted?**  \n- Grounded in: \u201cYou will measure whether our marketing spend works, and tell us honestly when it does not.\u201d  \n- Strong answer includes: specific data that highlighted under\u2011performance, clear communication of the issue (e.g., low incremental lift despite high spend), constructive recommendations, collaboration with media or product teams, and measurable outcome (budget reallocation, test redesign, etc.).  \n- Weak answer sounds like: \u201cI noticed the numbers were low and just told my manager to cut the budget,\u201d with no detail on analysis, communication style, or follow\u2011up.\n\n**5. How comfortable are you writing complex SQL queries for marketing data, and can you give an example of a particularly challenging query you\u2019ve built?**  \n- Grounded in: \u201cProficiency with SQL and spreadsheet modeling\u201d  \n- Strong answer includes: description of the data sources, joins, window functions, CTEs or sub\u2011queries used, performance optimization (indexes, limiting rows), and the business insight the query delivered.  \n- Weak answer sounds like: \u201cI can write SELECT * FROM tables,\u201d or \u201cI usually ask someone else to write the query for me.\u201d\n\n**6. Explain how you would collaborate with the finance team to create a reliable marketing budget forecast. What inputs and assumptions would you bring to the table?**  \n- Grounded in: \u201cPartner with finance on budget forecasting\u201d  \n- Strong answer includes: identification of key drivers (historical spend, seasonality, planned campaigns, expected lift), data sources (media plans, performance trends), assumptions documentation, iterative review process with finance, and how they reconcile discrepancies between marketing and finance expectations.  \n- Weak answer sounds like: \u201cI\u2019d just give them the numbers I have and let them do the rest,\u201d or \u201cI don\u2019t really work with finance; I focus on the marketing side.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 6,
+  "coverage": 0.75,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you built and maintained end\u2011to\u2011end test suites using Playwright?",
+    "cite": "Build and maintain end-to-end test suites using Playwright",
+    "verified": true
+   },
+   {
+    "question": "Can you describe your experience integrating test suites into CI pipelines?",
+    "cite": "Experience integrating test suites into CI pipelines",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you triaged flaky tests and drove down the flake rate.",
+    "cite": "Triage flaky tests and drive down the flake rate",
+    "verified": true
+   },
+   {
+    "question": "How have you worked with developers to improve the testability of new features?",
+    "cite": "Work with developers to improve testability of new features",
+    "verified": true
+   },
+   {
+    "question": "Describe a strategy you would use to reduce a test suite runtime that currently blocks deploys for 50 minutes.",
+    "cite": "Reduce our test suite runtime, which currently blocks deploys for 50 minutes",
+    "verified": true
+   },
+   {
+    "question": "How do you advocate for quality without becoming a bottleneck?",
+    "cite": "Ability to advocate for quality without becoming a bottleneck",
+    "verified": true
+   }
+  ],
+  "posting": "09_qa_engineer",
+  "arm": "grounded",
+  "raw": "**1. How have you built and maintained end\u2011to\u2011end test suites using Playwright?**  \n- Grounded in: \"Build and maintain end-to-end test suites using Playwright\"  \n- Strong answer includes: specific examples of projects where Playwright was selected, architecture of the test framework (page objects, fixtures, custom reporters), strategies for scaling tests, handling selectors, and ongoing maintenance practices (refactoring, version upgrades).  \n- Weak answer sounds like: \u201cI have used Playwright a little and wrote some tests.\u201d  \n\n**2. Can you describe your experience integrating test suites into CI pipelines?**  \n- Grounded in: \"Experience integrating test suites into CI pipelines\"  \n- Strong answer includes: the CI system used (e.g., GitHub Actions, Azure Pipelines, Jenkins), how test execution was triggered (pull\u2011request, nightly, on\u2011merge), handling of environment provisioning, reporting of results, and any challenges solved (parallelism, caching, flaky\u2011test mitigation).  \n- Weak answer sounds like: \u201cI know CI tools and have run tests in them before.\u201d  \n\n**3. Tell me about a time you triaged flaky tests and drove down the flake rate.**  \n- Grounded in: \"Triage flaky tests and drive down the flake rate\"  \n- Strong answer includes: a concrete incident, steps taken to identify root causes (environment instability, timing issues, data dependencies), the metrics before and after, and any process changes introduced (retry logic, test isolation, deterministic data).  \n- Weak answer sounds like: \u201cI just delete flaky tests.\u201d  \n\n**4. How have you worked with developers to improve the testability of new features?**  \n- Grounded in: \"Work with developers to improve testability of new features\"  \n- Strong answer includes: collaboration methods (design reviews, pair\u2011programming, shared test\u2011ability guidelines), concrete changes made to code (dependency injection, exposing hooks, reducing side\u2011effects), and the impact on test coverage or defect detection.  \n- Weak answer sounds like: \u201cI tell developers to write tests.\u201d  \n\n**5. Describe a strategy you would use to reduce a test suite runtime that currently blocks deploys for 50 minutes.**  \n- Grounded in: \"Reduce our test suite runtime, which currently blocks deploys for 50 minutes\"  \n- Strong answer includes: analysis techniques (profiling, test\u2011duration heat maps), approaches such as parallel execution, test selection/sharding, test\u2011level caching, refactoring slow tests, and measuring the effect on deployment cadence.  \n- Weak answer sounds like: \u201cI would just run the tests faster.\u201d  \n\n**6. How do you advocate for quality without becoming a bottleneck?**  \n- Grounded in: \"Ability to advocate for quality without becoming a bottleneck\"  \n- Strong answer includes: balancing thoroughness with delivery speed, establishing clear quality gates, automating feedback loops, empowering the team to own quality, and examples where advocacy improved outcomes without delaying releases.  \n- Weak answer sounds like: \u201cI always say quality is the most important thing.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 3,
+  "precision": 0.5,
+  "grounded_rate": 0.5,
+  "requirements": 8,
+  "requirements_covered": 3,
+  "coverage": 0.375,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you built and maintained end\u2011to\u2011end test suites with Playwright in a production codebase?",
+    "cite": "Build and maintain end\u2011to\u2011end test suites using Playwright",
+    "verified": false
+   },
+   {
+    "question": "Tell me about a time you reduced a test suite\u2019s runtime that was blocking deployments. What steps did you take and what was the impact?",
+    "cite": "Reduce our test suite runtime, which currently blocks deploys for 50 minutes",
+    "verified": true
+   },
+   {
+    "question": "What is your process for triaging flaky tests, and how have you successfully lowered the flake rate in a past role?",
+    "cite": "Triage flaky tests and drive down the flake rate",
+    "verified": true
+   },
+   {
+    "question": "Describe a situation where you partnered with developers to improve the testability of a new feature. What did you suggest and how did it help?",
+    "cite": "Work with developers to improve testability of new features",
+    "verified": true
+   },
+   {
+    "question": "With 3+ years of test automation experience, how have you leveraged JavaScript or TypeScript to create robust, maintainable test frameworks?",
+    "cite": "3+ years in test automation\u201d and \u201cStrong JavaScript or TypeScript",
+    "verified": false
+   },
+   {
+    "question": "How have you integrated automated test suites into CI pipelines, and how do you balance advocating for quality with avoiding bottlenecks in the delivery process?",
+    "cite": "Experience integrating test suites into CI pipelines\u201d and \u201cAbility to advocate for quality without becoming a bottleneck",
+    "verified": false
+   }
+  ],
+  "posting": "09_qa_engineer",
+  "arm": "naive",
+  "raw": "**1. How have you built and maintained end\u2011to\u2011end test suites with Playwright in a production codebase?**  \n- Grounded in: \u201cBuild and maintain end\u2011to\u2011end test suites using Playwright\u201d  \n- Strong answer includes: a concrete project description, architecture decisions (page\u2011object model, test data strategy), handling of selectors and async flows, examples of maintenance practices (refactoring, version upgrades), and measurable outcomes (e.g., coverage, defect detection).  \n- Weak answer sounds like: \u201cI\u2019ve used Playwright a little and wrote a few tests; it was fine.\u201d  \n\n---\n\n**2. Tell me about a time you reduced a test suite\u2019s runtime that was blocking deployments. What steps did you take and what was the impact?**  \n- Grounded in: \u201cReduce our test suite runtime, which currently blocks deploys for 50 minutes\u201d  \n- Strong answer includes: identification of bottlenecks (slow tests, redundant steps, parallelism limits), specific techniques applied (test sharding, selective tagging, mocking external services, optimizing fixtures), metrics before and after (e.g., from 50\u202fmin to <15\u202fmin), and how the change affected release cadence.  \n- Weak answer sounds like: \u201cI just ran the tests faster on a better machine.\u201d  \n\n---\n\n**3. What is your process for triaging flaky tests, and how have you successfully lowered the flake rate in a past role?**  \n- Grounded in: \u201cTriage flaky tests and drive down the flake rate\u201d  \n- Strong answer includes: a systematic approach (log analysis, reproducibility checks, isolation of environment variables, retry logic evaluation), tools used (e.g., Playwright\u2019s test reporter, CI dashboards), root\u2011cause categories discovered, concrete fixes implemented, and quantitative improvement (e.g., flake rate from 12\u202f% to <2\u202f%).  \n- Weak answer sounds like: \u201cI just delete flaky tests or ignore them.\u201d  \n\n---\n\n**4. Describe a situation where you partnered with developers to improve the testability of a new feature. What did you suggest and how did it help?**  \n- Grounded in: \u201cWork with developers to improve testability of new features\u201d  \n- Strong answer includes: early collaboration (design reviews, API contracts), concrete suggestions (dependency injection, exposing test hooks, deterministic IDs, avoiding hard\u2011coded timeouts), how those changes enabled more reliable automation, and any resulting metrics (e.g., faster test creation, reduced flakiness).  \n- Weak answer sounds like: \u201cI told them to write better code, but they didn\u2019t listen.\u201d  \n\n---\n\n**5. With 3+ years of test automation experience, how have you leveraged JavaScript or TypeScript to create robust, maintainable test frameworks?**  \n- Grounded in: \u201c3+ years in test automation\u201d and \u201cStrong JavaScript or TypeScript\u201d  \n- Strong answer includes: depth of experience (years, domains), use of TypeScript typings for better IDE support, modular architecture (helpers, custom matchers, reusable utilities), handling of async/await, linting/formatting standards, and examples of how these practices reduced bugs in the test code itself.  \n- Weak answer sounds like: \u201cI know JavaScript, I\u2019ve written some tests before.\u201d  \n\n---\n\n**6. How have you integrated automated test suites into CI pipelines, and how do you balance advocating for quality with avoiding bottlenecks in the delivery process?**  \n- Grounded in: \u201cExperience integrating test suites into CI pipelines\u201d and \u201cAbility to advocate for quality without becoming a bottleneck\u201d  \n- Strong answer includes: description of CI tools (GitHub Actions, Azure Pipelines, Jenkins), pipeline stages (setup, parallel execution, reporting), strategies to keep builds fast (caching, selective test runs, gate thresholds), communication tactics (metrics dashboards, stakeholder meetings) that promote quality while keeping lead time low.  \n- Weak answer sounds like: \u201cI just added the tests to the CI and hoped for the best.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 4,
+  "coverage": 0.5,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How do you approach writing and maintaining reference documentation for our REST and GraphQL APIs?",
+    "cite": "Write and maintain reference documentation for our REST and GraphQL APIs",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a recent project where you built runnable quickstarts in Python, JavaScript and Go, and how you ensured they stayed functional as the underlying APIs evolved?",
+    "cite": "Build runnable quickstarts in Python, JavaScript and Go",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a time you worked with engineers to document changes before they shipped, not after. What steps did you take to integrate documentation into the development workflow?",
+    "cite": "Work with engineers to document changes before they ship, not after",
+    "verified": true
+   },
+   {
+    "question": "What methods have you used to own and evolve the information architecture of a documentation site?",
+    "cite": "Own the information architecture of the docs site",
+    "verified": true
+   },
+   {
+    "question": "The posting says, \u201cOur API documentation is the main reason developers either adopt us or leave.\u201d How would you measure the impact of your documentation on developer adoption and retention?",
+    "cite": "Our API documentation is the main reason developers either adopt us or leave.",
+    "verified": true
+   },
+   {
+    "question": "The role states, \u201cYou will own it.\u201d How have you demonstrated full ownership of a documentation product in the past, especially when faced with competing priorities or limited resources?",
+    "cite": "You will own it.",
+    "verified": true
+   }
+  ],
+  "posting": "10_technical_writer",
+  "arm": "grounded",
+  "raw": "**1. How do you approach writing and maintaining reference documentation for our REST and GraphQL APIs?**  \n- Grounded in: \u201cWrite and maintain reference documentation for our REST and GraphQL APIs\u201d  \n- Strong answer includes: a clear process for gathering API specs, version control, consistency guidelines, handling both REST and GraphQL nuances, using examples, and a maintenance plan for updates.  \n- Weak answer sounds like: \u201cI just write docs as I go, nothing special.\u201d\n\n**2. Can you describe a recent project where you built runnable quickstarts in Python, JavaScript and Go, and how you ensured they stayed functional as the underlying APIs evolved?**  \n- Grounded in: \u201cBuild runnable quickstarts in Python, JavaScript and Go\u201d  \n- Strong answer includes: selection of language\u2011specific tooling, CI testing of quickstarts against live APIs, strategies for updating code when APIs change, and documentation of setup steps.  \n- Weak answer sounds like: \u201cI wrote a quickstart once and it worked.\u201d\n\n**3. Tell me about a time you worked with engineers to document changes before they shipped, not after. What steps did you take to integrate documentation into the development workflow?**  \n- Grounded in: \u201cWork with engineers to document changes before they ship, not after\u201d  \n- Strong answer includes: early collaboration meetings, using pull\u2011request templates, docs\u2011as\u2011code integration, tracking documentation tickets alongside code, and measurable outcomes (e.g., reduced release bugs).  \n- Weak answer sounds like: \u201cI just asked the engineers for the changes later.\u201d\n\n**4. What methods have you used to own and evolve the information architecture of a documentation site?**  \n- Grounded in: \u201cOwn the information architecture of the docs site\u201d  \n- Strong answer includes: information\u2011architecture audits, user\u2011research or analytics, taxonomy design, navigation structures, content modeling, and governance processes.  \n- Weak answer sounds like: \u201cI made sure the pages were in the right folder.\u201d\n\n**5. The posting says, \u201cOur API documentation is the main reason developers either adopt us or leave.\u201d How would you measure the impact of your documentation on developer adoption and retention?**  \n- Grounded in: \u201cOur API documentation is the main reason developers either adopt us or leave.\u201d  \n- Strong answer includes: defining metrics (e.g., time\u2011to\u2011first\u2011call, documentation bounce rate, support tickets, NPS), setting up instrumentation (analytics, surveys), A/B testing doc changes, and iterating based on data.  \n- Weak answer sounds like: \u201cIf developers like the docs, they\u2019ll stay.\u201d\n\n**6. The role states, \u201cYou will own it.\u201d How have you demonstrated full ownership of a documentation product in the past, especially when faced with competing priorities or limited resources?**  \n- Grounded in: \u201cYou will own it.\u201d  \n- Strong answer includes: taking responsibility for roadmap, prioritizing work, stakeholder communication, proactive issue resolution, and examples of delivering results despite constraints.  \n- Weak answer sounds like: \u201cI just did my part.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 1,
+  "precision": 0.16666666666666666,
+  "grounded_rate": 0.16666666666666666,
+  "requirements": 8,
+  "requirements_covered": 0,
+  "coverage": 0.0,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How would you ensure that API documentation drives developer adoption rather than causing them to abandon the product?",
+    "cite": "Our API documentation is the main reason developers either adopt us or leave. You will own it.",
+    "verified": true
+   },
+   {
+    "question": "Describe your process for writing and maintaining reference documentation for REST and GraphQL APIs.",
+    "cite": "Write and maintain reference documentation for our REST and GraphQL APIs.",
+    "verified": false
+   },
+   {
+    "question": "What approach would you take to build runnable quickstarts in Python, JavaScript, and Go that stay current with the product?",
+    "cite": "Build runnable quickstarts in Python, JavaScript and Go.",
+    "verified": false
+   },
+   {
+    "question": "How do you collaborate with engineers to document changes before they ship, and what tools or rituals support that workflow?",
+    "cite": "Work with engineers to document changes before they ship, not after.",
+    "verified": false
+   },
+   {
+    "question": "Explain how you would design and maintain the information architecture of a developer docs site.",
+    "cite": "Own the information architecture of the docs site.",
+    "verified": false
+   },
+   {
+    "question": "Tell us about a time you had to read code in a language you weren\u2019t an expert in to produce documentation. How did you handle it?",
+    "cite": "Ability to read code in at least one language well enough to write about it.",
+    "verified": false
+   }
+  ],
+  "posting": "10_technical_writer",
+  "arm": "naive",
+  "raw": "**1. How would you ensure that API documentation drives developer adoption rather than causing them to abandon the product?**  \n- Grounded in: \u201cOur API documentation is the main reason developers either adopt us or leave. You will own it.\u201d  \n- Strong answer includes: a clear, step\u2011by\u2011step methodology (e.g., user research, analytics, feedback loops, continuous improvement); examples of metrics tracked (adoption rates, time\u2011to\u2011first\u2011call, error rates); concrete tactics such as onboarding guides, error\u2011handling sections, and real\u2011world examples that reduce friction.  \n- Weak answer sounds like: \u201cI\u2019ll just write clear docs and hope developers like them.\u201d  \n\n---\n\n**2. Describe your process for writing and maintaining reference documentation for REST and GraphQL APIs.**  \n- Grounded in: \u201cWrite and maintain reference documentation for our REST and GraphQL APIs.\u201d  \n- Strong answer includes: a repeatable workflow (discover, draft, review, version, publish); handling of endpoint definitions, request/response schemas, pagination, authentication; strategies for keeping docs in sync with code (e.g., OpenAPI/GraphQL introspection, automated generation, CI checks); examples of past docs and how updates were managed.  \n- Weak answer sounds like: \u201cI just copy the API spec into a markdown file and update it when I remember.\u201d  \n\n---\n\n**3. What approach would you take to build runnable quickstarts in Python, JavaScript, and Go that stay current with the product?**  \n- Grounded in: \u201cBuild runnable quickstarts in Python, JavaScript and Go.\u201d  \n- Strong answer includes: selecting representative use\u2011cases, writing end\u2011to\u2011end examples, using package managers and CI to test that the code compiles/runs on each push, version\u2011pinning dependencies, and a plan for updating quickstarts when APIs change. Mention of automated testing (e.g., GitHub Actions) and documentation of setup steps.  \n- Weak answer sounds like: \u201cI\u2019ll write a few code snippets and hope they keep working.\u201d  \n\n---\n\n**4. How do you collaborate with engineers to document changes before they ship, and what tools or rituals support that workflow?**  \n- Grounded in: \u201cWork with engineers to document changes before they ship, not after.\u201d  \n- Strong answer includes: establishing documentation tickets alongside feature tickets, attending design/stand\u2011up meetings, using PR templates that require doc updates, pairing with engineers, leveraging docs\u2011as\u2011code tools (e.g., MkDocs, Docusaurus) and Git branches, and setting up CI checks that fail if docs are missing. Real\u2011world example of a successful early\u2011doc collaboration.  \n- Weak answer sounds like: \u201cI\u2019ll just ask the engineers for the changes after the code is merged.\u201d  \n\n---\n\n**5. Explain how you would design and maintain the information architecture of a developer docs site.**  \n- Grounded in: \u201cOwn the information architecture of the docs site.\u201d  \n- Strong answer includes: user\u2011centered IA (personas, task flows), logical hierarchy (getting started \u2192 tutorials \u2192 reference \u2192 guides), navigation patterns, search optimization, consistent taxonomy, handling of versioning, and metrics (search success, bounce rate) to iterate. May reference tools like Algolia, sitemap generators, and accessibility considerations.  \n- Weak answer sounds like: \u201cI\u2019ll put everything in one big page and add a table of contents.\u201d  \n\n---\n\n**6. Tell us about a time you had to read code in a language you weren\u2019t an expert in to produce documentation. How did you handle it?**  \n- Grounded in: \u201cAbility to read code in at least one language well enough to write about it.\u201d  \n- Strong answer includes: the specific language, steps taken to understand the code (reading tests, running examples, consulting developers, using IDE tooling), how gaps were filled (pair programming, documentation of assumptions), and the resulting documentation quality. Demonstrates learning agility and communication with engineers.  \n- Weak answer sounds like: \u201cI just guessed what the code does and wrote it down.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How would you design and run experiments on acoustic and language modeling for languages with under 100 hours of labelled audio?",
+    "cite": "Design and run experiments on acoustic and language modeling for languages with under 100 hours of labelled audio",
+    "verified": true
+   },
+   {
+    "question": "Can you describe a project where you applied self\u2011supervised pretraining approaches to speech data?",
+    "cite": "Experience with self-supervised pretraining approaches",
+    "verified": true
+   },
+   {
+    "question": "Tell us about a time you mentored an intern and what you did to ensure their growth.",
+    "cite": "Mentor interns",
+    "verified": true
+   },
+   {
+    "question": "How have you collaborated with engineering teams to build or improve evaluation infrastructure?",
+    "cite": "collaborate with engineering on evaluation infrastructure",
+    "verified": true
+   },
+   {
+    "question": "Describe the steps you would take to transfer a successful research prototype into the production recognition stack.",
+    "cite": "Transfer successful research into the production recognition stack",
+    "verified": true
+   },
+   {
+    "question": "Give an example of how you performed a careful ablation study to isolate the impact of a specific component in your experiments.",
+    "cite": "Strong experimental discipline, including careful ablation studies",
+    "verified": true
+   }
+  ],
+  "posting": "11_research_scientist",
+  "arm": "grounded",
+  "raw": "**1. How would you design and run experiments on acoustic and language modeling for languages with under 100 hours of labelled audio?**  \n- Grounded in: \u201cDesign and run experiments on acoustic and language modeling for languages with under 100 hours of labelled audio\u201d  \n- Strong answer includes: a clear methodology for data preprocessing, model selection (e.g., end\u2011to\u2011end vs. hybrid), strategies for data augmentation, use of transfer learning or multilingual models, evaluation metrics suited to low\u2011resource settings, and a plan for reproducibility.  \n- Weak answer sounds like: \u201cI would just train a standard model and hope it works.\u201d\n\n**2. Can you describe a project where you applied self\u2011supervised pretraining approaches to speech data?**  \n- Grounded in: \u201cExperience with self-supervised pretraining approaches\u201d  \n- Strong answer includes: the specific self\u2011supervised technique (e.g., wav2vec\u202f2.0, HuBERT), dataset characteristics, pretraining\u2011fine\u2011tuning pipeline, performance gains over baselines, and any challenges encountered.  \n- Weak answer sounds like: \u201cI know about self\u2011supervised learning, but I haven\u2019t used it.\u201d\n\n**3. Tell us about a time you mentored an intern and what you did to ensure their growth.**  \n- Grounded in: \u201cMentor interns\u201d  \n- Strong answer includes: setting clear goals, regular check\u2011ins, teaching core concepts (e.g., experiment design, code review), providing constructive feedback, and measurable outcomes (e.g., a deliverable or paper contribution).  \n- Weak answer sounds like: \u201cI told them what to do and they did it.\u201d\n\n**4. How have you collaborated with engineering teams to build or improve evaluation infrastructure?**  \n- Grounded in: \u201ccollaborate with engineering on evaluation infrastructure\u201d  \n- Strong answer includes: description of cross\u2011functional communication, defining evaluation metrics, integrating pipelines (e.g., CI/CD, automated scoring), handling scalability or latency concerns, and concrete results such as faster turnaround or more reliable reporting.  \n- Weak answer sounds like: \u201cI just gave them the data and they handled it.\u201d\n\n**5. Describe the steps you would take to transfer a successful research prototype into the production recognition stack.**  \n- Grounded in: \u201cTransfer successful research into the production recognition stack\u201d  \n- Strong answer includes: code refactoring for production standards, performance profiling, compatibility checks with existing APIs, testing (unit, integration, regression), monitoring in deployment, and a rollout plan with rollback strategies.  \n- Weak answer sounds like: \u201cI would just copy the code into production.\u201d\n\n**6. Give an example of how you performed a careful ablation study to isolate the impact of a specific component in your experiments.**  \n- Grounded in: \u201cStrong experimental discipline, including careful ablation studies\u201d  \n- Strong answer includes: hypothesis formulation, systematic removal or variation of the component, controlled experimental setup, statistical analysis (e.g., significance testing), clear reporting of results, and conclusions drawn.  \n- Weak answer sounds like: \u201cI tried turning things off and saw what happened.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 5,
+  "precision": 0.8333333333333334,
+  "grounded_rate": 0.8333333333333334,
+  "requirements": 8,
+  "requirements_covered": 5,
+  "coverage": 0.625,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How would you design an experiment to improve acoustic modeling for a language that has fewer than 100 hours of labelled audio?",
+    "cite": "Design and run experiments on acoustic and language modeling for languages with under 100 hours of labelled audio",
+    "verified": true
+   },
+   {
+    "question": "Can you give an example of a recent paper you published (or co\u2011authored) that would be a good fit for Interspeech or ICASSP, and explain its impact?",
+    "cite": "Publish findings at venues such as Interspeech and ICASSP",
+    "verified": true
+   },
+   {
+    "question": "Describe a time when you took a research prototype and successfully integrated it into a production speech recognition stack. What challenges did you face and how did you overcome them?",
+    "cite": "Transfer successful research into the production recognition stack",
+    "verified": true
+   },
+   {
+    "question": "What approach would you use to mentor an intern who is new to speech research, ensuring they contribute meaningfully to the team\u2019s goals?",
+    "cite": "Mentor interns and collaborate with engineering on evaluation infrastructure",
+    "verified": true
+   },
+   {
+    "question": "Explain how you conduct careful ablation studies to isolate the effect of a single component in a speech model.",
+    "cite": "Strong experimental discipline, including careful ablation studies",
+    "verified": true
+   },
+   {
+    "question": "What experience do you have with self\u2011supervised pretraining for speech, and how would you apply it to a low\u2011resource language scenario?",
+    "cite": "Experience with self\u2011supervised pretraining approaches",
+    "verified": false
+   }
+  ],
+  "posting": "11_research_scientist",
+  "arm": "naive",
+  "raw": "**1. How would you design an experiment to improve acoustic modeling for a language that has fewer than 100 hours of labelled audio?**  \n- Grounded in: \u201cDesign and run experiments on acoustic and language modeling for languages with under 100\u202fhours of labelled audio\u201d  \n- Strong answer includes: a clear hypothesis, selection of appropriate data augmentation or semi\u2011supervised techniques, a description of baseline vs. proposed model, metrics for evaluation, a plan for ablation studies, and considerations for reproducibility (e.g., random seeds, versioned code).  \n- Weak answer sounds like: \u201cI\u2019d just try a bigger neural net and see if it works better.\u201d\n\n---\n\n**2. Can you give an example of a recent paper you published (or co\u2011authored) that would be a good fit for Interspeech or ICASSP, and explain its impact?**  \n- Grounded in: \u201cPublish findings at venues such as Interspeech and ICASSP\u201d  \n- Strong answer includes: title, venue, core contribution, methodology, quantitative results, and why the work matters to the speech community (e.g., advancing low\u2011resource language tech).  \n- Weak answer sounds like: \u201cI have a paper in a conference, it was accepted, that\u2019s all.\u201d\n\n---\n\n**3. Describe a time when you took a research prototype and successfully integrated it into a production speech recognition stack. What challenges did you face and how did you overcome them?**  \n- Grounded in: \u201cTransfer successful research into the production recognition stack\u201d  \n- Strong answer includes: description of the prototype, engineering constraints (latency, memory, API), collaboration with engineers, testing/validation pipeline, any refactoring or optimization performed, and measurable improvements after deployment.  \n- Weak answer sounds like: \u201cI just gave the code to the engineers and they handled it.\u201d\n\n---\n\n**4. What approach would you use to mentor an intern who is new to speech research, ensuring they contribute meaningfully to the team\u2019s goals?**  \n- Grounded in: \u201cMentor interns and collaborate with engineering on evaluation infrastructure\u201d  \n- Strong answer includes: setting clear learning objectives, pairing the intern with a specific sub\u2011project, providing regular code reviews, teaching best practices for experiment tracking, and giving constructive feedback while aligning their work with the team\u2019s evaluation pipeline.  \n- Weak answer sounds like: \u201cI\u2019d let them read some papers and hope they figure it out.\u201d\n\n---\n\n**5. Explain how you conduct careful ablation studies to isolate the effect of a single component in a speech model.**  \n- Grounded in: \u201cStrong experimental discipline, including careful ablation studies\u201d  \n- Strong answer includes: defining a baseline, systematically removing or altering one component at a time, keeping all other variables constant, using statistical significance testing, documenting results in a reproducible manner, and interpreting findings to guide next steps.  \n- Weak answer sounds like: \u201cI just turn things off and see if the accuracy changes.\u201d\n\n---\n\n**6. What experience do you have with self\u2011supervised pretraining for speech, and how would you apply it to a low\u2011resource language scenario?**  \n- Grounded in: \u201cExperience with self\u2011supervised pretraining approaches\u201d  \n- Strong answer includes: specific self\u2011supervised models used (e.g., wav2vec\u202f2.0, HuBERT), how pretraining data was gathered (unlabelled audio, multilingual corpora), fine\u2011tuning strategy for the target low\u2011resource language, any domain\u2011adaptation tricks, and empirical results showing benefit over purely supervised training.  \n- Weak answer sounds like: \u201cI know about self\u2011supervised learning, I could try it.\u201d"
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 6,
+  "precision": 1.0,
+  "grounded_rate": 1.0,
+  "requirements": 8,
+  "requirements_covered": 6,
+  "coverage": 0.75,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How have you personally pulled usage reports to inform customer health, and what data sources or tools did you use?",
+    "cite": "Comfort with data; you should be able to pull usage reports yourself",
+    "verified": true
+   },
+   {
+    "question": "Describe the forecasting methodology you have used to predict renewal revenue and how you ensured its accuracy.",
+    "cite": "Experience managing renewals and forecasting accurately",
+    "verified": true
+   },
+   {
+    "question": "Give an example of a time you drove adoption and renewal across a portfolio of enterprise accounts. What specific actions did you take?",
+    "cite": "Drive adoption and renewal across your accounts, and own the renewal forecast",
+    "verified": true
+   },
+   {
+    "question": "How have you structured and led quarterly business reviews with executive stakeholders to demonstrate value?",
+    "cite": "Run quarterly business reviews with executive stakeholders",
+    "verified": true
+   },
+   {
+    "question": "When you identified an expansion opportunity, how did you collaborate with the sales team to close it?",
+    "cite": "Identify expansion opportunities and partner with sales to close them",
+    "verified": true
+   },
+   {
+    "question": "Tell me about a situation where you had to advocate for a customer to the product team using evidence rather than anecdote. What evidence did you present and what was the result?",
+    "cite": "Act as the voice of the customer to product, with evidence rather than anecdote",
+    "verified": true
+   }
+  ],
+  "posting": "12_customer_success",
+  "arm": "grounded",
+  "raw": "**1. How have you personally pulled usage reports to inform customer health, and what data sources or tools did you use?**  \n- Grounded in: \u201cComfort with data; you should be able to pull usage reports yourself\u201d  \n- Strong answer includes: specific reporting tools (e.g., SQL, Looker, Tableau, internal dashboards), the steps you take to extract, clean, and interpret the data, and how the insights drove concrete actions for the account.  \n- Weak answer sounds like: \u201cI\u2019m comfortable with data and can get reports when needed.\u201d  \n\n**2. Describe the forecasting methodology you have used to predict renewal revenue and how you ensured its accuracy.**  \n- Grounded in: \u201cExperience managing renewals and forecasting accurately\u201d  \n- Strong answer includes: a clear process (historical churn analysis, usage trends, health scores), any quantitative models or spreadsheets, validation steps (e.g., cross\u2011checking with finance), and measurable accuracy results.  \n- Weak answer sounds like: \u201cI just make a good guess based on past renewals.\u201d  \n\n**3. Give an example of a time you drove adoption and renewal across a portfolio of enterprise accounts. What specific actions did you take?**  \n- Grounded in: \u201cDrive adoption and renewal across your accounts, and own the renewal forecast\u201d  \n- Strong answer includes: concrete tactics (onboarding programs, training sessions, usage nudges), metrics tracked, how you monitored progress, and the impact on adoption rates and renewal outcomes.  \n- Weak answer sounds like: \u201cI always keep in touch with customers and they usually renew.\u201d  \n\n**4. How have you structured and led quarterly business reviews with executive stakeholders to demonstrate value?**  \n- Grounded in: \u201cRun quarterly business reviews with executive stakeholders\u201d  \n- Strong answer includes: agenda design, preparation of executive\u2011level dashboards, storytelling techniques, handling tough questions, and any follow\u2011up actions that resulted from the QBR.  \n- Weak answer sounds like: \u201cI just schedule a meeting every three months and talk about the product.\u201d  \n\n**5. When you identified an expansion opportunity, how did you collaborate with the sales team to close it?**  \n- Grounded in: \u201cIdentify expansion opportunities and partner with sales to close them\u201d  \n- Strong answer includes: the discovery process (usage patterns, business needs), the hand\u2011off workflow, joint account planning, negotiation role, and the outcome (e.g., upsell size, timeline).  \n- Weak answer sounds like: \u201cI tell sales about the opportunity and they handle it.\u201d  \n\n**6. Tell me about a situation where you had to advocate for a customer to the product team using evidence rather than anecdote. What evidence did you present and what was the result?**  \n- Grounded in: \u201cAct as the voice of the customer to product, with evidence rather than anecdote\u201d  \n- Strong answer includes: specific metrics or usage data compiled, how you framed the request, the product team\u2019s response, and any product changes or roadmap adjustments that followed.  \n- Weak answer sounds like: \u201cI just told the product team what the customer said.\u201d  "
+ },
+ {
+  "parsed": 6,
+  "cited": 6,
+  "verified": 1,
+  "precision": 0.16666666666666666,
+  "grounded_rate": 0.16666666666666666,
+  "requirements": 8,
+  "requirements_covered": 0,
+  "coverage": 0.0,
+  "generic_questions": 0,
+  "parse_failed": false,
+  "rows": [
+   {
+    "question": "How do you structure your day\u2011to\u2011day workflow to effectively manage a book of roughly 25 enterprise accounts representing $8M in annual recurring revenue?",
+    "cite": "You will own a book of roughly 25 enterprise accounts representing $8M in annual recurring revenue.",
+    "verified": true
+   },
+   {
+    "question": "Walk me through the process you use to create an accurate renewal forecast and how you ensure it stays on target.",
+    "cite": "Drive adoption and renewal across your accounts, and own the renewal forecast.",
+    "verified": false
+   },
+   {
+    "question": "Describe how you prepare and deliver a quarterly business review (QBR) to executive stakeholders. What key elements do you include?",
+    "cite": "Run quarterly business reviews with executive stakeholders.",
+    "verified": false
+   },
+   {
+    "question": "How have you identified expansion opportunities within existing accounts and partnered with sales to close them?",
+    "cite": "Identify expansion opportunities and partner with sales to close them.",
+    "verified": false
+   },
+   {
+    "question": "Give an example of a time you acted as the voice of the customer to the product team using evidence rather than anecdote. What was the outcome?",
+    "cite": "Act as the voice of the customer to product, with evidence rather than anecdote.",
+    "verified": false
+   },
+   {
+    "question": "Which data tools and metrics do you rely on to pull usage reports yourself, and how do you turn that data into actionable insights for your accounts?",
+    "cite": "Comfort with data; you should be able to pull usage reports yourself.",
+    "verified": false
+   }
+  ],
+  "posting": "12_customer_success",
+  "arm": "naive",
+  "raw": "**1. How do you structure your day\u2011to\u2011day workflow to effectively manage a book of roughly 25 enterprise accounts representing $8M in annual recurring revenue?**  \n- Grounded in: \u201cYou will own a book of roughly 25 enterprise accounts representing $8M in annual recurring revenue.\u201d  \n- Strong answer includes: a clear prioritization system (e.g., tiering accounts by health score or renewal date), regular cadence of touch\u2011points (executive check\u2011ins, health reviews, usage monitoring), use of CRM/CS tools to track tasks and revenue impact, and examples of how the candidate has successfully juggled a similar volume while meeting or exceeding ARR targets.  \n- Weak answer sounds like: \u201cI just check my email and respond when needed,\u201d or \u201cI try to stay on top of everything but it can get busy.\u201d\n\n---\n\n**2. Walk me through the process you use to create an accurate renewal forecast and how you ensure it stays on target.**  \n- Grounded in: \u201cDrive adoption and renewal across your accounts, and own the renewal forecast.\u201d  \n- Strong answer includes: a step\u2011by\u2011step methodology (data collection from usage, health scores, contract terms; risk identification; collaboration with finance or ops; building a tiered forecast with confidence intervals); tools used (e.g., Salesforce, Gainsight, Excel models); a track record of hitting forecast accuracy targets (e.g., >90%); and a proactive plan for at\u2011risk renewals.  \n- Weak answer sounds like: \u201cI just look at the numbers and make a guess,\u201d or \u201cI ask the sales team what they think.\u201d\n\n---\n\n**3. Describe how you prepare and deliver a quarterly business review (QBR) to executive stakeholders. What key elements do you include?**  \n- Grounded in: \u201cRun quarterly business reviews with executive stakeholders.\u201d  \n- Strong answer includes: pre\u2011QBR data gathering (usage trends, ROI metrics, health scores), a concise agenda aligned with executive priorities, storytelling that ties product value to business outcomes, visual aids (dashboards, slide decks), a collaborative discussion format, and follow\u2011up action items with owners and timelines. The candidate should cite a specific QBR that led to a renewal or expansion.  \n- Weak answer sounds like: \u201cI put together a PowerPoint and talk about the product,\u201d or \u201cI just read the numbers out loud.\u201d\n\n---\n\n**4. How have you identified expansion opportunities within existing accounts and partnered with sales to close them?**  \n- Grounded in: \u201cIdentify expansion opportunities and partner with sales to close them.\u201d  \n- Strong answer includes: a systematic approach (usage analysis, unmet needs assessment, stakeholder mapping), examples of a successful upsell or cross\u2011sell (including deal size and timeline), clear collaboration steps with the sales team (joint account plans, co\u2011selling meetings, shared KPIs), and metrics used to measure expansion success.  \n- Weak answer sounds like: \u201cI tell the sales team when I think there\u2019s a chance to sell more,\u201d or \u201cI just wait for them to reach out.\u201d\n\n---\n\n**5. Give an example of a time you acted as the voice of the customer to the product team using evidence rather than anecdote. What was the outcome?**  \n- Grounded in: \u201cAct as the voice of the customer to product, with evidence rather than anecdote.\u201d  \n- Strong answer includes: collection of quantitative data (e.g., feature usage stats, NPS trends, support ticket volume), a formal feedback process (e.g., product council, JIRA tickets), clear articulation of the problem and proposed solution, collaboration with product managers, and a measurable result (feature release, roadmap change, reduced churn).  \n- Weak answer sounds like: \u201cI told the product team what customers said,\u201d or \u201cI just passed along a complaint.\u201d\n\n---\n\n**6. Which data tools and metrics do you rely on to pull usage reports yourself, and how do you turn that data into actionable insights for your accounts?**  \n- Grounded in: \u201cComfort with data; you should be able to pull usage reports yourself.\u201d  \n- Strong answer includes: specific tools (e.g., SQL, Looker, Tableau, Gainsight, Snowflake), key metrics tracked (adoption rate, active users, feature depth, churn predictors), a reproducible reporting process (scheduled queries, dashboards), and concrete examples of turning a data insight into a customer\u2011focused action (e.g., targeted training, upsell conversation, risk mitigation).  \n- Weak answer sounds like: \u201cI ask someone else to get the reports for me,\u201d or \u201cI just look at the dashboard and hope it\u2019s fine.\u201d"
+ }
+]

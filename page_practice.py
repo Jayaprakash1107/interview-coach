@@ -11,6 +11,7 @@ storage.init_db()
 
 DIMENSIONS = core.DIMENSIONS
 GROUNDED_PROMPT, ROLE_PROMPT, _ = core.prompts()
+GAPS_PROMPT = core.gaps_prompt()
 
 
 # ----------------------------------------------------------------------
@@ -67,7 +68,8 @@ with tab_q:
                             else "Thinking about this role..."):
                 out = core.call_model(prompt + jd)
             st.session_state.update(jd=jd, mode=mode, raw_output=out,
-                                    questions=core.extract_questions(out))
+                                    questions=core.extract_questions(out),
+                                    gap_output="")
 
     if st.session_state["raw_output"]:
         mode = st.session_state["mode"]
@@ -93,6 +95,51 @@ with tab_q:
                             unsafe_allow_html=True)
 
             st.caption("Pick one of these on the Practice tab and answer it.")
+
+            # ---------- coverage ----------
+            # Verification is per question. This is the view across the whole
+            # posting: which requirements got a question, and which did not.
+            if mode == "posting":
+                rows, covered, total = core.coverage(st.session_state["jd"], parsed)
+                if total:
+                    st.markdown(ui.coverage_block(rows, covered, total),
+                                unsafe_allow_html=True)
+
+                    gaps = [r["line"] for r in rows if not r["nums"]]
+                    if gaps:
+                        label = (f"Write questions for the {len(gaps)} that "
+                                 f"{'were' if len(gaps) != 1 else 'was'} missed")
+                        if st.button(label, type="primary", key="fill_gaps"):
+                            listed = "\n".join(f"- {g}" for g in gaps)
+                            prompt = (GAPS_PROMPT + "FULL POSTING:\n"
+                                      + st.session_state["jd"]
+                                      + "\n\nUNCOVERED LINES:\n" + listed)
+                            with st.spinner("Looking at what was missed..."):
+                                out = core.call_model(prompt)
+                            st.session_state["gap_output"] = out
+                            st.session_state["questions"] = (
+                                st.session_state["questions"]
+                                + core.extract_questions(out))
+                            st.rerun()
+
+            # ---------- questions written for the gaps ----------
+            if st.session_state["gap_output"]:
+                extra = ui.parse_questions(st.session_state["gap_output"])
+                st.markdown(ui.section(
+                    "Questions for what was missed",
+                    "These were written against the requirements no question had "
+                    "reached. They are checked the same way as the rest."),
+                    unsafe_allow_html=True)
+                if not extra:
+                    st.markdown(st.session_state["gap_output"])
+                else:
+                    extra_ok = {id(q): core.cite_found(q["cite"],
+                                                       st.session_state["jd"])
+                                for q in extra if q["cite"]}
+                    for q in extra:
+                        st.markdown(
+                            ui.question_card(q, verified=extra_ok.get(id(q))),
+                            unsafe_allow_html=True)
 
 
 # ---------------- practice ----------------

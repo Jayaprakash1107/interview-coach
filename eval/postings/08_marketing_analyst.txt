@@ -1,0 +1,18 @@
+Marketing Analyst
+Denver, CO
+
+About the role
+You will measure whether our marketing spend works, and tell us honestly when
+it does not.
+
+What you will do
+- Build attribution reporting across paid search, paid social and email
+- Run and analyze incrementality tests, including geo holdouts
+- Maintain the weekly marketing performance review deck
+- Partner with finance on budget forecasting
+
+Qualifications
+- 2+ years in marketing analytics or a similar quantitative role
+- Proficiency with SQL and spreadsheet modeling
+- Understanding of the limits of last-click attribution
+- Ability to communicate findings clearly to a non-technical audience

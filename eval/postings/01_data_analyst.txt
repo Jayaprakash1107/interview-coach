@@ -1,0 +1,23 @@
+Data Analyst, Customer Insights
+Boston, MA (hybrid, 3 days on site)
+
+About the role
+Our Customer Insights team turns raw product and billing data into decisions
+the commercial organization can act on. You will own reporting for two business
+lines and act as the analytical partner to their leads.
+
+Key responsibilities
+- Build and maintain dashboards in Tableau covering retention, churn and
+  expansion revenue
+- Write and optimize SQL against a Snowflake warehouse, including models that
+  other analysts depend on
+- Partner with non-technical stakeholders to turn vague questions into
+  measurable analyses, and present findings to directors
+- Investigate data quality issues and drive them to resolution with the data
+  engineering team
+
+Qualifications
+- 2+ years of experience with SQL in a production analytics environment
+- Demonstrated ability to communicate findings clearly to a non-technical audience
+- Experience with Python for analysis is preferred
+- Degree in a quantitative field, or equivalent practical experience
