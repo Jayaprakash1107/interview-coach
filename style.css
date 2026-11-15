@@ -9,7 +9,6 @@
    it was not. Neither is ever used for decoration.
    ====================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 :root {
   --paper:      #F6F7F4;
@@ -23,9 +22,12 @@
   --flag:       #9C3225;
   --flag-bg:    #F7EDEB;
 
-  --serif: 'IBM Plex Serif', Georgia, serif;
-  --sans:  'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
-  --mono:  'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+  /* Bundled in fonts.css, not fetched, so they cannot fail to load.
+     Source Serif 4 carries the headline and the wordmark; Inter carries
+     everything a person actually reads. */
+  --display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono:    'Geist Mono', ui-monospace, 'SF Mono', Consolas, monospace;
 }
 
 /* ---------- canvas ---------- */
@@ -35,6 +37,10 @@ html, body, .stApp {
   font-family: var(--sans);
   color: var(--ink);
 }
+
+/* Markdown bold renders <strong>, which defaults to 700. Only 600 is
+   bundled, so without this the browser fakes a heavier face. */
+.stApp strong, .stApp b { font-weight: 600; }
 
 /* Elements Streamlit styles directly, so inheritance alone will not reach
    them. Note the absence of div and span: those catch icon ligatures. */
@@ -46,7 +52,7 @@ html, body, .stApp {
 }
 
 /* Streamlit draws its icons as Material Symbols ligatures. The rule above
-   would swap the icon font for Plex, at which point the ligature name
+   would swap the icon font for Geist, at which point the ligature name
    ("keyboard_double_arrow_left") renders as literal text. Hand those
    elements their font back. */
 .material-symbols-rounded,
@@ -67,28 +73,19 @@ span[class*="material-symbols"],
 /* ---------- masthead ---------- */
 .ic-mast { margin: 0 0 1.6rem; }
 
-.ic-mast h1 {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 2.05rem;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
-  margin: 0 0 0.3rem;
-  color: var(--ink);
-}
 
 .ic-mast p {
   font-size: 0.95rem;
   color: var(--ink-soft);
   margin: 0;
-  max-width: 60ch;
+  max-width: 56ch;
   line-height: 1.55;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 /* ---------- streamlit headings ---------- */
 .stApp h2, .stApp h3 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -189,6 +186,7 @@ span[class*="material-symbols"],
 
 .ic-q-num {
   font-family: var(--mono);
+  font-weight: 500;
   font-size: 0.8rem;
   color: var(--ink-faint);
   flex: 0 0 1.4rem;
@@ -196,7 +194,7 @@ span[class*="material-symbols"],
 }
 
 .ic-q-text {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.12rem;
   line-height: 1.45;
   font-weight: 500;
@@ -226,9 +224,8 @@ span[class*="material-symbols"],
 
 .ic-cite-body {
   display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
   line-height: 1.55;
   color: var(--ink-soft);
 }
@@ -283,10 +280,11 @@ span[class*="material-symbols"],
   margin: 0.4rem 0 1.1rem;
 }
 .ic-overall .v {
-  font-family: var(--mono);
-  font-size: 2.1rem;
-  font-weight: 500;
-  letter-spacing: -0.06em;
+  font-family: var(--sans);
+  font-variant-numeric: tabular-nums;
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   line-height: 1;
   color: var(--ink);
 }
@@ -354,7 +352,7 @@ span[class*="material-symbols"],
   margin-bottom: 0.3rem;
 }
 .ic-rewrite .txt {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--ink);
@@ -391,7 +389,10 @@ section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 { font-size: 1rem; }
 
 /* ---------- misc streamlit chrome ---------- */
-[data-testid="stMetricValue"] { font-family: var(--mono); font-weight: 500; color: var(--ink); }
+[data-testid="stMetricValue"] {
+  font-family: var(--sans); font-variant-numeric: tabular-nums;
+  font-weight: 600; letter-spacing: -0.02em; color: var(--ink);
+}
 [data-testid="stMetricLabel"] { color: var(--ink-soft); }
 .stDataFrame { border: 1px solid var(--rule); border-radius: 3px; }
 hr { border-color: var(--rule); }
@@ -412,7 +413,6 @@ hr { border-color: var(--rule); }
 
 @media (max-width: 640px) {
   .block-container { padding-left: 1rem; padding-right: 1rem; }
-  .ic-mast h1 { font-size: 1.65rem; }
   .ic-cite, .ic-guide { margin-left: 0; }
   .ic-q-text { font-size: 1.05rem; }
 }
@@ -514,23 +514,16 @@ section.main,
 
 .ic-hero { margin: 0 0 2.4rem; }
 
-.ic-hero h1 {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 3.1rem;
-  letter-spacing: -0.025em;
-  line-height: 1.02;
-  margin: 0 0 0.9rem;
-  color: var(--ink);
-}
 
 .stApp .ic-claim {
-  font-family: var(--serif);
-  font-size: 1.32rem;
-  line-height: 1.4;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 2.45rem;
+  line-height: 1.14;
+  letter-spacing: -0.016em;
   color: var(--ink);
-  margin: 0 0 0.7rem;
-  max-width: 30ch;
+  margin: 0 0 1.1rem;
+  max-width: 23ch;
   text-wrap: balance;
 }
 
@@ -559,7 +552,7 @@ section.main,
 }
 
 .ic-spec-q {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.35;
@@ -583,10 +576,11 @@ section.main,
 .ic-sec { margin: 0 0 1.9rem; }
 
 .ic-sec h2 {
-  font-family: var(--serif);
-  font-size: 1.18rem;
+  font-family: var(--display);
+  font-size: 1.3rem;
   font-weight: 600;
-  margin: 0 0 0.45rem;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
   color: var(--ink);
 }
 
@@ -613,9 +607,9 @@ section.main,
 .ic-row:last-child { border-bottom: 1px solid var(--rule); }
 
 .ic-row-k {
-  font-family: var(--serif);
-  font-size: 0.98rem;
-  font-weight: 500;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--ink);
 }
 
@@ -628,7 +622,7 @@ section.main,
 
 @media (max-width: 640px) {
   .ic-hero h1 { font-size: 2.2rem; }
-  .ic-claim { font-size: 1.12rem; }
+  .ic-claim { font-size: 1.7rem; }
   .ic-spec-q { font-size: 1.16rem; }
   .ic-row { grid-template-columns: 1fr; gap: 0.3rem; }
 }
@@ -651,22 +645,28 @@ section.main,
   width: 1.9rem;
   height: 1.9rem;
   flex: 0 0 auto;
-  color: var(--ink);
   display: block;
+  /* Inherit rather than pin, so the mark reverses correctly if it is ever
+     set on ink. Pinning the colour made it invisible on a dark ground. */
+  color: inherit;
 }
 
+/* The rule under the quote is the same green that means "verified"
+   everywhere else in the app. One green, one meaning. */
+.ic-mark .ic-rule { fill: var(--verified); }
+
 .ic-word {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
-  font-size: 1.65rem;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  color: inherit;          /* so the whole lockup reverses as a unit */
   line-height: 1;
 }
 
-.ic-lockup-lg { gap: 0.85rem; margin-bottom: 1rem; }
-.ic-lockup-lg .ic-mark { width: 3.1rem; height: 3.1rem; }
-.ic-lockup-lg .ic-word { font-size: 3rem; letter-spacing: -0.03em; }
+.ic-lockup-lg { gap: 0.6rem; margin-bottom: 1.5rem; }
+.ic-lockup-lg .ic-mark { width: 2rem; height: 2rem; }
+.ic-lockup-lg .ic-word { font-size: 1.95rem; letter-spacing: -0.015em; }
 
 @media (max-width: 640px) {
   .ic-lockup-lg .ic-mark { width: 2.2rem; height: 2.2rem; }

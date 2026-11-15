@@ -1,9 +1,16 @@
-# Streamlit's own widgets read these, so the chrome matches the stylesheet
-# rather than fighting it. Light base: the page is exam paper, not a console.
+# The stylesheet is written for a light ground. Declaring the theme here
+# means the app does not depend on the viewer's Streamlit theme setting,
+# and the CSS overrides become a backstop rather than the mechanism.
 [theme]
-base = "light"
-primaryColor = "#16303F"
-backgroundColor = "#F6F7F4"
+base               = "light"
+primaryColor       = "#16303F"
+backgroundColor    = "#F6F7F4"
 secondaryBackgroundColor = "#EDEFEA"
-textColor = "#16303F"
-font = "sans serif"
+textColor          = "#16303F"
+font               = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

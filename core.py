@@ -26,8 +26,13 @@ def inject_css():
     # life of the process, so edits to style.css would not appear until the
     # server restarted.
     here = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(here, "style.css"), encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    # fonts.css first: it carries the embedded @font-face rules, which must
+    # be defined before anything references the families.
+    sheets = []
+    for name in ("fonts.css", "style.css"):
+        with open(os.path.join(here, name), encoding="utf-8") as f:
+            sheets.append(f.read())
+    st.markdown("<style>" + "\n".join(sheets) + "</style>", unsafe_allow_html=True)
 
 
 # ----------------------------------------------------------------------
